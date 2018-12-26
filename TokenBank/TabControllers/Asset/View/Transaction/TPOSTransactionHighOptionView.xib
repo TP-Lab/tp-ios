@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSTransactionHighOptionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sae-gm-Fb7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cWp-JD-ANi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFu-G2-FYB">
+                    <rect key="frame" x="20" y="120" width="335" height="100"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-b4-YRx">
+                            <rect key="frame" x="4" y="4" width="327" height="92"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="十六进制数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EZ-mc-SQ7">
+                            <rect key="frame" x="9" y="10" width="86" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Puh-HP-grN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.74509803921568629" green="0.77647058823529413" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="OEK-b4-YRx" firstAttribute="top" secondItem="sFu-G2-FYB" secondAttribute="top" constant="4" id="6vV-8d-Wxe"/>
+                        <constraint firstItem="0EZ-mc-SQ7" firstAttribute="leading" secondItem="sFu-G2-FYB" secondAttribute="leading" constant="9" id="FDy-lr-6Tv"/>
+                        <constraint firstItem="OEK-b4-YRx" firstAttribute="leading" secondItem="sFu-G2-FYB" secondAttribute="leading" constant="4" id="OlB-Fc-EeF"/>
+                        <constraint firstItem="0EZ-mc-SQ7" firstAttribute="top" secondItem="sFu-G2-FYB" secondAttribute="top" constant="10" id="cyz-wZ-9R3"/>
+                        <constraint firstAttribute="height" constant="100" id="d89-Pj-A48"/>
+                        <constraint firstAttribute="trailing" secondItem="OEK-b4-YRx" secondAttribute="trailing" constant="4" id="i7D-S3-UTd"/>
+                        <constraint firstAttribute="bottom" secondItem="OEK-b4-YRx" secondAttribute="bottom" constant="4" id="jlC-L9-Ggw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zU-ui-O4i">
+                    <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="P6T-uL-ckR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sae-gm-Fb7" secondAttribute="trailing" id="9UY-cS-DDj"/>
+                <constraint firstItem="sFu-G2-FYB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ecm-1Y-VoG"/>
+                <constraint firstItem="sae-gm-Fb7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="H52-O4-7Vx"/>
+                <constraint firstItem="3zU-ui-O4i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="JdT-sC-dII"/>
+                <constraint firstItem="3zU-ui-O4i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Woq-gG-Np7"/>
+                <constraint firstItem="sFu-G2-FYB" firstAttribute="top" secondItem="3zU-ui-O4i" secondAttribute="bottom" constant="20" id="Xol-Cq-irs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3zU-ui-O4i" secondAttribute="trailing" id="fQ1-IB-578"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sFu-G2-FYB" secondAttribute="trailing" constant="20" id="kxm-tF-qQm"/>
+                <constraint firstItem="sae-gm-Fb7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uGi-EV-xwT"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="gasAmountContrainer" destination="3zU-ui-O4i" id="XC4-Xa-aAC"/>
+                <outlet property="gasPriceContainer" destination="sae-gm-Fb7" id="8Ab-XI-M37"/>
+                <outlet property="hexTextview" destination="OEK-b4-YRx" id="Zeg-p1-xZk"/>
+                <outlet property="placeholder" destination="0EZ-mc-SQ7" id="XCY-mf-ctl"/>
+                <outlet property="textviewContainer" destination="sFu-G2-FYB" id="ZTM-Lr-Fxb"/>
+            </connections>
+            <point key="canvasLocation" x="-94.5" y="46.5"/>
+        </view>
+    </objects>
+</document>

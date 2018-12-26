@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSTransactionEmptyView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_lookingforward" translatesAutoresizingMaskIntoConstraints="NO" id="Xz1-O8-s1E">
+                    <rect key="frame" x="125" y="121" width="125" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="Adx-bq-hKO"/>
+                        <constraint firstAttribute="height" constant="104" id="JZp-wu-mgq"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="敬请期待" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-1g-pJa">
+                    <rect key="frame" x="138.5" y="261" width="98" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="去中心化的全球数字资产交易所" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-yD-kIy">
+                    <rect key="frame" x="80.5" y="300" width="214.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="OLn-OC-PkI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="U7f-yD-kIy" firstAttribute="centerX" secondItem="ZjA-1g-pJa" secondAttribute="centerX" id="BL2-kg-3Sw"/>
+                <constraint firstItem="U7f-yD-kIy" firstAttribute="top" secondItem="ZjA-1g-pJa" secondAttribute="bottom" constant="10" id="ERs-dL-G9S"/>
+                <constraint firstItem="ZjA-1g-pJa" firstAttribute="top" secondItem="Xz1-O8-s1E" secondAttribute="bottom" constant="36" id="Jgk-DL-fSg"/>
+                <constraint firstItem="Xz1-O8-s1E" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="TCU-aI-gcM"/>
+                <constraint firstItem="ZjA-1g-pJa" firstAttribute="centerX" secondItem="Xz1-O8-s1E" secondAttribute="centerX" id="d7U-7P-mfi"/>
+                <constraint firstItem="Xz1-O8-s1E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="101" id="sag-EV-Zho"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="exchangeLabel" destination="U7f-yD-kIy" id="ls2-9s-dee"/>
+                <outlet property="soonLabel" destination="ZjA-1g-pJa" id="0Hc-ge-S0q"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_lookingforward" width="125" height="104"/>
+    </resources>
+</document>

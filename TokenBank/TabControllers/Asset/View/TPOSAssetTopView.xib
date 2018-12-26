@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSAssetTopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk1-51-BTy">
+                    <rect key="frame" x="22" y="36" width="55" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="-7" minY="0.0" maxX="7" maxY="0.0"/>
+                    <state key="normal" title="转账" image="icon_main_transaction"/>
+                    <connections>
+                        <action selector="transactionAction" destination="iN0-l3-epB" eventType="touchUpInside" id="EcI-yn-UVV"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52V-h7-3QS">
+                    <rect key="frame" x="104" y="36" width="55" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="-7" minY="0.0" maxX="7" maxY="0.0"/>
+                    <state key="normal" title="收款" image="icon_main_receiver"/>
+                    <connections>
+                        <action selector="receiverAction" destination="iN0-l3-epB" eventType="touchUpInside" id="C1b-eb-9Dx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-Qf-ImF">
+                    <rect key="frame" x="342" y="37" width="18" height="22"/>
+                    <state key="normal" image="icon_main_add"/>
+                    <connections>
+                        <action selector="addAction" destination="iN0-l3-epB" eventType="touchUpInside" id="i9w-F6-5Jt"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNG-bv-8aq" customClass="UIControl">
+                    <rect key="frame" x="15" y="39" width="34" height="18"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoT-Fg-mdk">
+                            <rect key="frame" x="25" y="9" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_main_wallet" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-Gb-8dQ">
+                            <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_main_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-fv-2aL">
+                            <rect key="frame" x="28" y="7.5" width="6" height="3"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="XdQ-Gb-8dQ" secondAttribute="bottom" id="9m6-cg-ndh"/>
+                        <constraint firstItem="XdQ-Gb-8dQ" firstAttribute="leading" secondItem="WNG-bv-8aq" secondAttribute="leading" id="BWl-fv-2Wt"/>
+                        <constraint firstItem="XdQ-Gb-8dQ" firstAttribute="top" secondItem="WNG-bv-8aq" secondAttribute="top" id="Hvv-z0-qUh"/>
+                        <constraint firstItem="AoT-Fg-mdk" firstAttribute="centerY" secondItem="XdQ-Gb-8dQ" secondAttribute="centerY" id="Sv2-ZC-Vqh"/>
+                        <constraint firstItem="AoT-Fg-mdk" firstAttribute="leading" secondItem="XdQ-Gb-8dQ" secondAttribute="trailing" constant="7" id="diI-pv-5GM"/>
+                        <constraint firstItem="NeR-fv-2aL" firstAttribute="leading" secondItem="AoT-Fg-mdk" secondAttribute="trailing" constant="3" id="hem-qt-t1P"/>
+                        <constraint firstAttribute="trailing" secondItem="NeR-fv-2aL" secondAttribute="trailing" id="lI8-cf-Hvf"/>
+                        <constraint firstItem="NeR-fv-2aL" firstAttribute="centerY" secondItem="XdQ-Gb-8dQ" secondAttribute="centerY" id="oE9-dP-7ai"/>
+                    </constraints>
+                    <connections>
+                        <action selector="changeWalletAction" destination="iN0-l3-epB" eventType="touchUpInside" id="HyJ-as-Bty"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.36470588240000001" green="0.72156862749999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="52V-h7-3QS" firstAttribute="centerY" secondItem="pk1-51-BTy" secondAttribute="centerY" id="42R-ww-Quo"/>
+                <constraint firstAttribute="trailing" secondItem="ToR-Qf-ImF" secondAttribute="trailing" constant="15" id="4ER-xO-ycN"/>
+                <constraint firstItem="ToR-Qf-ImF" firstAttribute="centerY" secondItem="pk1-51-BTy" secondAttribute="centerY" id="IqG-NQ-WCD"/>
+                <constraint firstItem="pk1-51-BTy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="22" id="L2X-Hy-SKU"/>
+                <constraint firstItem="WNG-bv-8aq" firstAttribute="centerY" secondItem="ToR-Qf-ImF" secondAttribute="centerY" id="XHG-1s-puy"/>
+                <constraint firstAttribute="bottom" secondItem="pk1-51-BTy" secondAttribute="bottom" constant="16" id="fft-xB-dOG"/>
+                <constraint firstItem="WNG-bv-8aq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="fr6-Qx-SDK"/>
+                <constraint firstItem="52V-h7-3QS" firstAttribute="leading" secondItem="pk1-51-BTy" secondAttribute="trailing" constant="27" id="gS2-Zh-gPc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="changeWalletView" destination="WNG-bv-8aq" id="6t0-Tm-PS6"/>
+                <outlet property="indicatorImageView" destination="NeR-fv-2aL" id="g51-5c-Eoy"/>
+                <outlet property="receiverButton" destination="52V-h7-3QS" id="1y1-Rp-YNI"/>
+                <outlet property="transactionButton" destination="pk1-51-BTy" id="cFE-Uh-Rh9"/>
+                <outlet property="walletNameLabel" destination="AoT-Fg-mdk" id="6ty-bJ-Cpk"/>
+            </connections>
+            <point key="canvasLocation" x="-107.5" y="-186"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_main_add" width="18" height="18"/>
+        <image name="icon_main_indicator" width="6" height="3"/>
+        <image name="icon_main_receiver" width="24" height="24"/>
+        <image name="icon_main_transaction" width="24" height="24"/>
+        <image name="icon_main_wallet" width="18" height="18"/>
+    </resources>
+</document>

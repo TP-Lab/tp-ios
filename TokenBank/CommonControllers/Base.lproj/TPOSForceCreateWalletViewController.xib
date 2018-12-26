@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPOSForceCreateWalletViewController">
+            <connections>
+                <outlet property="backgroundImageView" destination="npO-dL-lyA" id="J48-n1-yPm"/>
+                <outlet property="createWalletButton" destination="JE1-YZ-kYy" id="lLA-jh-Cjg"/>
+                <outlet property="importWalletButton" destination="uuH-hJ-tn9" id="8Rn-p1-h1f"/>
+                <outlet property="protocolButton" destination="q1e-Rf-kjk" id="Wv7-xc-xau"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_welcome_667" translatesAutoresizingMaskIntoConstraints="NO" id="npO-dL-lyA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-YZ-kYy">
+                    <rect key="frame" x="47.5" y="491" width="280" height="48"/>
+                    <color key="backgroundColor" red="0.15686274510000001" green="0.56470588239999997" blue="0.99607843139999996" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="s1A-4t-UGL"/>
+                        <constraint firstAttribute="height" constant="48" id="zea-Kf-Ayz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="创建钱包"/>
+                    <connections>
+                        <action selector="createAction" destination="-1" eventType="touchUpInside" id="85A-5G-c3r"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuH-hJ-tn9">
+                    <rect key="frame" x="47.5" y="559" width="280" height="48"/>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.29632482389999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="导入钱包">
+                        <color key="titleColor" red="0.15686274510000001" green="0.56470588239999997" blue="0.99607843139999996" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="importAction" destination="-1" eventType="touchUpInside" id="0Ox-XK-F5b"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1e-Rf-kjk">
+                    <rect key="frame" x="105.5" y="623" width="164" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <state key="normal" title="进入即代表同意服务协议和隐私条款">
+                        <color key="titleColor" red="0.15686274510000001" green="0.56470588239999997" blue="0.99607843139999996" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="protocolAction" destination="-1" eventType="touchUpInside" id="GnR-eJ-LUk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uuH-hJ-tn9" firstAttribute="top" secondItem="JE1-YZ-kYy" secondAttribute="bottom" constant="20" id="3kM-Hy-bfy"/>
+                <constraint firstItem="npO-dL-lyA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5M6-Fo-2xE"/>
+                <constraint firstItem="uuH-hJ-tn9" firstAttribute="height" secondItem="JE1-YZ-kYy" secondAttribute="height" id="5f5-7k-xMp"/>
+                <constraint firstAttribute="bottom" secondItem="npO-dL-lyA" secondAttribute="bottom" id="HEV-pf-yws"/>
+                <constraint firstAttribute="bottom" secondItem="q1e-Rf-kjk" secondAttribute="bottom" constant="20" id="Ii9-Q5-tcb"/>
+                <constraint firstItem="npO-dL-lyA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JTL-1p-tv2"/>
+                <constraint firstItem="uuH-hJ-tn9" firstAttribute="centerX" secondItem="npO-dL-lyA" secondAttribute="centerX" id="KYb-1J-lqR"/>
+                <constraint firstAttribute="bottom" secondItem="uuH-hJ-tn9" secondAttribute="bottom" constant="60" id="P07-cZ-Joq"/>
+                <constraint firstItem="uuH-hJ-tn9" firstAttribute="centerX" secondItem="JE1-YZ-kYy" secondAttribute="centerX" id="Yjn-aE-9hd"/>
+                <constraint firstItem="q1e-Rf-kjk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eQ9-k9-D8d"/>
+                <constraint firstItem="uuH-hJ-tn9" firstAttribute="width" secondItem="JE1-YZ-kYy" secondAttribute="width" id="ou1-xm-pFa"/>
+                <constraint firstAttribute="trailing" secondItem="npO-dL-lyA" secondAttribute="trailing" id="wU8-rs-Phg"/>
+            </constraints>
+            <point key="canvasLocation" x="-335" y="35"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_welcome_667" width="375" height="667"/>
+    </resources>
+</document>

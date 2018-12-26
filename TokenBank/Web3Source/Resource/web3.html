@@ -1,0 +1,288 @@
+<!doctype html>
+<html><head>
+    <script src="web3.min.js"></script>
+</head><body>
+    <script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+    
+    setupWebViewJavascriptBridge(function(bridge) {
+                                 bridge.registerHandler('eth_init', function(data, responseCallback){
+                                                        web3 = new Web3()
+                                                        if (data != undefined) {
+                                                        web3.setProvider(new web3.providers.HttpProvider(data));
+                                                        } else {
+                                                        web3.setProvider(new web3.providers.HttpProvider("https://api.myetherapi.com/eth"));
+                                                        }
+                                                        if (web3 != undefined ) {
+                                                        responseCallback("success");
+                                                        } else {
+                                                        responseCallback("fail");
+                                                        }
+                                                        });
+                                 
+                                 //  Account
+                                 bridge.registerHandler('eth_createAccount',function(data, responseCallback) {
+                                                        if (data != undefined) {
+                                                        var account = web3.eth.accounts.create(data)
+                                                        responseCallback(account);
+                                                        } else {
+                                                        var account = web3.eth.accounts.create()
+                                                        responseCallback(account);
+                                                        }
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_privateKeyToAccount', function(data, responseCallback){
+                                                        var account = web3.eth.accounts.privateKeyToAccount(data);
+                                                        responseCallback(account);
+                                                        });
+                                 // wallet
+                                 bridge.registerHandler('eth_createWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var callback = paramsjson.callback;
+                                                        var numberOfAccounts = paramsjson.numberOfAccounts;
+                                                        var entropy = paramsjson.entropy;
+                                                        var wallet = web3.eth.accounts.wallet.create(numberOfAccounts, entropy);
+                                                        responseCallback(wallet);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_addAccountToWallet',function(data, responseCallback){
+                                                        var paramsjson = JSON.parse(data);
+                                                        var privatekey = paramsjson.privatekey;
+                                                        var account = paramsjson.account;
+                                                        var param = undefined;
+                                                        if (privatekey != undefined) {
+                                                        param = privatekey;
+                                                        } else if (account != undefined) {
+                                                        param = account;
+                                                        }
+                                                        if (param != undefined) {
+                                                        var account = web3.eth.accounts.wallet.add(account);
+                                                        if (account != undefined) {
+                                                        //插入成功
+                                                        responseCallback({"code":"0","result":"success","accout":accout});
+                                                        } else {
+                                                        //创建失败
+                                                        responseCallback({"code":"-1","result":"fail"});
+                                                        }
+                                                        } else {
+                                                        //创建失败
+                                                        responseCallback({"code":"-1","result":"fail"});
+                                                        }
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_removeAccountFromWallet', function(data, responseCallback){
+                                                        var paramsjson = JSON.parse(data);
+                                                        var accountAddress = paramsjson.accountAddress;
+                                                        var accountIndexInWallet = paramsjson.accountIndexInWallet;
+                                                        if (accountAddress != undefined) {
+                                                        if (web3.eth.accounts.wallet.remove(accountAddress)) {
+                                                        //删除成功
+                                                        responseCallback({"code":"0"});
+                                                        } else {
+                                                        //删除失败
+                                                        responseCallback({"code":-1});
+                                                        }
+                                                        } else if (accountIndexInWallet >= 0) {
+                                                        if (web3.eth.accounts.wallet.remove(accountIndexInWallet)) {
+                                                        //删除成功
+                                                        responseCallback({"code":0});
+                                                        } else {
+                                                        //删除失败
+                                                        responseCallback({"code":-1});
+                                                        }
+                                                        } else {
+                                                        //删除失败,参数错误
+                                                        responseCallback({"code":-1});
+                                                        }
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_clearWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var wallet = web3.eth.accounts.wallet.clear();
+                                                        responseCallback(wallet);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_encryptWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var password = paramsjson.password;
+                                                        var encryptResult = web3.eth.accounts.wallet.encrypt(password); //返回列表
+                                                        responseCallback(encryptResult);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_decryptWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var password = paramsjson.password;
+                                                        var keystoreArray = paramsjson.keystoreArray;
+                                                        var wallet = web3.eth.accounts.wallet.decrypt(keystoreArray, password);
+                                                        responseCallback(wallet);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_saveWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var password = paramsjson.password;
+                                                        var keyName = paramsjson.keyName;
+                                                        if (keyName != undefined) {
+                                                        if (web3.eth.accounts.wallet.save(password, keyName)) {
+                                                        responseCallback({"code":"0"});
+                                                        } else {
+                                                        responseCallback({"code":"-1"});
+                                                        }
+                                                        } else {
+                                                        if (web3.eth.accounts.wallet.save(password, keyName)) {
+                                                        responseCallback({"code":"0"});
+                                                        } else {
+                                                        responseCallback({"code":"-1"});
+                                                        }
+                                                        }
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_loadWallet', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        var password = paramsjson.password;
+                                                        var keyName = paramsjson.keyName;
+                                                        if (keyName != undefined) {
+                                                        var wallet = web3.eth.accounts.wallet.load(password, keyName);
+                                                        responseCallback(wallet);
+                                                        } else {
+                                                        var wallet = web3.eth.accounts.wallet.load(password);
+                                                        responseCallback(wallet);
+                                                        }
+                                                        });
+                                 
+                                 // iban
+                                 bridge.registerHandler('eth_toAddress', function (data, responseCallback){
+                                                        var ibanAddress = data;
+                                                        var ethAddress = web3.eth.Iban.toAddress(ibanAddress);
+                                                        responseCallback(ethAddress);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_toIban', function (data, responseCallback){
+                                                        var iban = web3.eth.Iban.toIban(data);
+                                                        responseCallback(iban);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_fromEthereumAddress', function (data, responseCallback){
+                                                        var paramsjson = JSON.parse(data);
+                                                        var ibanAddress = paramsjson.ibanAddress;
+                                                        var ethAddress = web3.eth.Iban.fromEthereumAddress(ibanAddress)
+                                                        responseCallback(ethAddress);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_changeToWei', function (data, responseCallback){
+                                                        var paramsjson = JSON.parse(data);
+                                                        var count = paramsjson.count;
+                                                        var tokenType = paramsjson.tokenType;
+                                                        var weiCount = web3.utils.toWei(count, tokenType);
+                                                        responseCallback(weiCount);
+                                                        });
+                                 
+                                 bridge.registerHandler('eth_weiChangeToEth', function (data, responseCallback){
+                                                        var paramsjson = JSON.parse(data);
+                                                        var count = paramsjson.count;
+                                                        var tokenType = paramsjson.tokenType;
+                                                        var ethCount = web3.utils.fromWei(count,'ether');
+                                                        responseCallback(ethCount);
+                                                        });
+                                 
+                                 // bridge.registerHandler('toAddress', function (data, responseCallback){
+                                 
+                                 // });
+
+                                 bridge.registerHandler('eth_accountSignTransaction',function(data,responseCallback){
+                                    var paramsjson = JSON.parse(data);
+                                                        var privateKey = paramsjson.privateKey;
+                                                        var transactionToSign = paramsjson.transactionToSign;
+                                                        if (transactionToSign.abi == null || transactionToSign.abi == undefined) {
+                                                        alert('转ETH');
+                                                        web3.eth.accounts.signTransaction(transactionToSign, privateKey).then(function (result) {
+                                                                                                                              responseCallback(result);                                             });
+                                                        } else {
+                                                        alert('转代币');
+                                                        
+                                                        var abi = transactionToSign.abi;
+                                                        var contractAddress = transactionToSign.to;
+                                                        var from = transactionToSign.from;
+                                                        var value = transactionToSign.value;
+                                                        var toAddress = transactionToSign.toAddress;
+                                                        var gasLimit = transactionToSign.gasLimit;
+                                                        var gasPrice = transactionToSign.gasPrice;
+
+                                                        var contract = new web3.eth.Contract(abi, contractAddress, { from: from });
+                                                        web3.eth.getTransactionCount(from).then(function (result) {
+                                                        var rawTransaction = {
+                                                          "from": from,
+                                                          "gasPrice": web3.utils.toHex(gasPrice),
+                                                          "gasLimit": web3.utils.toHex(gasLimit),
+                                                          "to": contractAddress,
+                                                          "data": contract.methods.transfer(toAddress, value).encodeABI(),
+                                                          "nonce":web3.utils.toHex(result)
+                                                        };
+                                                        web3.eth.accounts.signTransaction(rawTransaction, privateKey).then(function (result) {
+                                        responseCallback(result);
+                                                        });
+                                                    });
+                                                        }
+                                 });
+                                 
+                                 bridge.registerHandler('eth_removeAccount', function(data, responseCallback) {
+                                                        if (data != undefined) {
+                                                        var result = web3.eth.accounts.wallet.remove(data);
+                                                        responseCallback(result);
+                                                        } else {
+                                                        responseCallback("false");
+                                                        }
+                                                        });
+
+                                 bridge.registerHandler('eth_sendTransaction', function(data, responseCallback) {
+                                    var paramsjson = JSON.parse(data);
+                                    var rawTransaction = paramsjson.rawTransaction; //由signedTransaction产生
+                                    web3.eth.sendSignedTransaction(rawTransaction)
+                                    .on('receipt', function (receipt) {
+                                        responseCallback(receipt);
+                                        })
+                                    .on('error', function (error) {
+                                        alert(error);
+                                        responseCallback("发生错误");
+                                        });
+                                });
+                                 
+                                 bridge.registerHandler('eth_getGasPrice', function(data, responseCallback) {
+                                                        web3.eth.getGasPrice().then(function (result) {
+                                                                                               responseCallback(result);
+                                                                                               });
+                                });
+                                 bridge.registerHandler('eth_estimateGas', function(data, responseCallback) {
+                                                        var paramsjson = JSON.parse(data);
+                                                        web3.eth.estimateGas(paramsjson).then(function (result) {
+                                                                                                           responseCallback(result);
+                                                                                                           });
+                                                        });
+                                 bridge.registerHandler('eth_isAddress', function(data, responseCallback) {
+                                                        var result = web3.utils.isAddress(data);
+                                                        responseCallback(result);
+                                                        });
+                                 bridge.registerHandler('eth_toBN', function(data, responseCallback) {
+                                                        var result = web3.utils.hexToUtf8(data);
+                                                        responseCallback(result);
+                                                        });
+                                 bridge.registerHandler('eth_toHex', function(data, responseCallback) {
+                                                        var result = web3.utils.toHex(data);
+                                                        responseCallback(result);
+                                                        });
+                    });
+        </script>
+</body></html>
+

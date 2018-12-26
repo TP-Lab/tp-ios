@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSBackupAlert">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_waring" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-Tj-v4W">
+                    <rect key="frame" x="105" y="30" width="70" height="65"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为了您的钱包安全" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7z-Ak-Aai">
+                    <rect key="frame" x="74.5" y="113.5" width="131" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请备份私钥或助记词" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-bu-myh">
+                    <rect key="frame" x="15" y="139" width="250" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTs-BV-hsr">
+                    <rect key="frame" x="0.0" y="185" width="280" height="45"/>
+                    <color key="backgroundColor" red="0.15686274510000001" green="0.56470588239999997" blue="0.99607843139999996" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="r2t-4P-Hzx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="立即备份"/>
+                    <connections>
+                        <action selector="backupAction" destination="iN0-l3-epB" eventType="touchUpInside" id="Zw2-vB-n0W"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d7z-Ak-Aai" firstAttribute="centerX" secondItem="rbT-Tj-v4W" secondAttribute="centerX" id="2jo-fI-Ke8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wyk-bu-myh" secondAttribute="trailing" constant="15" id="CHm-GU-BCg"/>
+                <constraint firstItem="wyk-bu-myh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="D33-Ci-OGI"/>
+                <constraint firstItem="TTs-BV-hsr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tfu-D9-ri4"/>
+                <constraint firstItem="wyk-bu-myh" firstAttribute="centerX" secondItem="d7z-Ak-Aai" secondAttribute="centerX" id="XMR-0G-YqU"/>
+                <constraint firstItem="wyk-bu-myh" firstAttribute="top" secondItem="d7z-Ak-Aai" secondAttribute="bottom" constant="6" id="fXr-5y-UA1"/>
+                <constraint firstItem="rbT-Tj-v4W" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="hLS-4U-Frm"/>
+                <constraint firstItem="d7z-Ak-Aai" firstAttribute="top" secondItem="rbT-Tj-v4W" secondAttribute="bottom" constant="18.5" id="kvQ-eQ-9Zn"/>
+                <constraint firstItem="TTs-BV-hsr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="lQ9-d0-YI8"/>
+                <constraint firstItem="rbT-Tj-v4W" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rQP-Xn-c8X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TTs-BV-hsr" secondAttribute="trailing" id="sGp-HV-fRg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backButton" destination="TTs-BV-hsr" id="slw-ut-iJH"/>
+                <outlet property="backTipsLabel" destination="wyk-bu-myh" id="vWV-Rd-OCw"/>
+                <outlet property="walletLineLabel" destination="d7z-Ak-Aai" id="1P5-Pw-ygi"/>
+            </connections>
+            <point key="canvasLocation" x="-405" y="-204"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_waring" width="70" height="65"/>
+    </resources>
+</document>

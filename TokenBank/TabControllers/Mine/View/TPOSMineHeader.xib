@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSMineHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-ih-9ET">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="220"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV6-4S-ldc">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="220"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="54" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="19" minY="-33" maxX="0.0" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onWalletButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lor-Ud-eqJ"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mine_wallet" translatesAutoresizingMaskIntoConstraints="NO" id="iVb-bc-Im2">
+                            <rect key="frame" x="79" y="40" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="CAT-vt-6Ck"/>
+                                <constraint firstAttribute="height" constant="30" id="lWc-wS-YOd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="管理钱包" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcc-3X-QBB">
+                            <rect key="frame" x="36.5" y="81" width="115" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="2tE-VK-efE"/>
+                                <constraint firstAttribute="width" constant="115" id="dxT-Ct-3uE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.56470588235294117" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AV6-4S-ldc" secondAttribute="bottom" id="90J-VI-WTA"/>
+                        <constraint firstItem="iVb-bc-Im2" firstAttribute="centerX" secondItem="AV6-4S-ldc" secondAttribute="centerX" id="BSM-xf-akH"/>
+                        <constraint firstItem="Tcc-3X-QBB" firstAttribute="centerX" secondItem="iVb-bc-Im2" secondAttribute="centerX" id="Fr6-i3-xoq"/>
+                        <constraint firstItem="AV6-4S-ldc" firstAttribute="leading" secondItem="5y7-ih-9ET" secondAttribute="leading" id="Thl-MT-mLp"/>
+                        <constraint firstItem="AV6-4S-ldc" firstAttribute="top" secondItem="5y7-ih-9ET" secondAttribute="top" id="eWQ-zi-VOw"/>
+                        <constraint firstItem="AV6-4S-ldc" firstAttribute="top" secondItem="iVb-bc-Im2" secondAttribute="bottom" constant="-70" id="gTI-F8-ImE"/>
+                        <constraint firstItem="Tcc-3X-QBB" firstAttribute="top" secondItem="iVb-bc-Im2" secondAttribute="bottom" constant="11" id="ivO-M1-Sct"/>
+                        <constraint firstItem="AV6-4S-ldc" firstAttribute="width" secondItem="5y7-ih-9ET" secondAttribute="width" id="zUd-Ax-UQw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjy-Qd-wcf">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="220"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-mS-BVr">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="220"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="54" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="19" minY="-33" maxX="0.0" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onTransButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ywd-Gs-hIG"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mine_transaction" translatesAutoresizingMaskIntoConstraints="NO" id="krh-6a-EXV">
+                            <rect key="frame" x="79" y="40" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="NL9-3R-IvW"/>
+                                <constraint firstAttribute="width" constant="30" id="Qs9-TX-6da"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-hL-Onj">
+                            <rect key="frame" x="36.5" y="81" width="115" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="DLh-5k-x24"/>
+                                <constraint firstAttribute="width" constant="115" id="i4O-k3-aqY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.56470588235294117" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4NY-mS-BVr" secondAttribute="trailing" id="DpH-uK-Eym"/>
+                        <constraint firstItem="4NY-mS-BVr" firstAttribute="top" secondItem="Cjy-Qd-wcf" secondAttribute="top" id="Gto-TN-Asa"/>
+                        <constraint firstItem="QOv-hL-Onj" firstAttribute="centerX" secondItem="krh-6a-EXV" secondAttribute="centerX" id="ckQ-6L-FMY"/>
+                        <constraint firstItem="krh-6a-EXV" firstAttribute="centerX" secondItem="4NY-mS-BVr" secondAttribute="centerX" id="lRJ-Ej-zcH"/>
+                        <constraint firstAttribute="bottom" secondItem="4NY-mS-BVr" secondAttribute="bottom" id="oIJ-6n-ZsL"/>
+                        <constraint firstItem="4NY-mS-BVr" firstAttribute="width" secondItem="Cjy-Qd-wcf" secondAttribute="width" id="prP-dp-Hdi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-c7-z6C">
+                    <rect key="frame" x="187" y="48" width="1" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="YMO-qN-Rq5"/>
+                        <constraint firstAttribute="height" constant="35" id="fhr-uT-ajc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="krh-6a-EXV" firstAttribute="top" secondItem="iVb-bc-Im2" secondAttribute="top" id="1nq-lC-Esn"/>
+                <constraint firstItem="5y7-ih-9ET" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="1rj-yO-NGR"/>
+                <constraint firstItem="Cjy-Qd-wcf" firstAttribute="width" secondItem="5y7-ih-9ET" secondAttribute="width" id="CdZ-Ep-BYH"/>
+                <constraint firstItem="5y7-ih-9ET" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EnO-9S-Dze"/>
+                <constraint firstItem="5y7-ih-9ET" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JH8-uR-eqb"/>
+                <constraint firstItem="5y7-ih-9ET" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="JnR-Nj-5lf"/>
+                <constraint firstItem="QOv-hL-Onj" firstAttribute="centerY" secondItem="Tcc-3X-QBB" secondAttribute="centerY" id="L4x-vg-ea8"/>
+                <constraint firstItem="Cjy-Qd-wcf" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bnF-HU-g2F"/>
+                <constraint firstItem="d5M-c7-z6C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="cZC-OM-hAZ"/>
+                <constraint firstItem="Cjy-Qd-wcf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ct5-je-HYi"/>
+                <constraint firstItem="d5M-c7-z6C" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="muV-BR-YB8"/>
+                <constraint firstItem="Cjy-Qd-wcf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pkN-46-pih"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="manageLabel" destination="Tcc-3X-QBB" id="aKF-rm-36r"/>
+                <outlet property="recordLabel" destination="QOv-hL-Onj" id="kE5-aw-mYM"/>
+                <outlet property="transButton" destination="4NY-mS-BVr" id="Uu0-7q-OdV"/>
+                <outlet property="walletButton" destination="AV6-4S-ldc" id="gcH-vA-xde"/>
+            </connections>
+            <point key="canvasLocation" x="-463" y="-90"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_mine_transaction" width="26" height="26"/>
+        <image name="icon_mine_wallet" width="26" height="26"/>
+    </resources>
+</document>

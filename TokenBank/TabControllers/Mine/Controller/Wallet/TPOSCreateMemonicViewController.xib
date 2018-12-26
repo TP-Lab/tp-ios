@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPOSCreateMemonicViewController">
+            <connections>
+                <outlet property="backupTitle" destination="eBS-bt-G7l" id="qFS-1c-FSq"/>
+                <outlet property="nextButton" destination="guT-Pj-7Cp" id="5Jc-yT-7Ud"/>
+                <outlet property="privateContentView" destination="MXK-Uj-yp2" id="2fh-80-KcK"/>
+                <outlet property="privateKeyComment" destination="s6J-8l-DVM" id="l66-ei-4cv"/>
+                <outlet property="privateKeyLabel" destination="mC1-Jc-g5b" id="HSu-dJ-IKQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="抄写下你的钱包助记词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBS-bt-G7l">
+                    <rect key="frame" x="96" y="63" width="183.5" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="uOq-Xr-CMH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="助记词用于恢复钱包或重置钱包密码，将它准确的抄写在纸上，并存放在只有你知道的安全的地方。" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6J-8l-DVM">
+                    <rect key="frame" x="15" y="100" width="345" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-Uj-yp2">
+                    <rect key="frame" x="15" y="156.5" width="345" height="76"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC1-Jc-g5b">
+                            <rect key="frame" x="16" y="26" width="313" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mC1-Jc-g5b" firstAttribute="top" secondItem="MXK-Uj-yp2" secondAttribute="top" constant="26" id="eI7-AX-qnB"/>
+                        <constraint firstItem="mC1-Jc-g5b" firstAttribute="leading" secondItem="MXK-Uj-yp2" secondAttribute="leading" constant="16" id="jf5-nI-8qo"/>
+                        <constraint firstAttribute="trailing" secondItem="mC1-Jc-g5b" secondAttribute="trailing" constant="16" id="r2e-JB-ZYQ"/>
+                        <constraint firstAttribute="bottom" secondItem="mC1-Jc-g5b" secondAttribute="bottom" constant="26" id="sb9-3z-wnL"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guT-Pj-7Cp">
+                    <rect key="frame" x="15" y="272.5" width="345" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="SKf-gs-YHM"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="clickNextBtn:" destination="-1" eventType="touchUpInside" id="hAL-Mt-6y9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s6J-8l-DVM" firstAttribute="top" secondItem="eBS-bt-G7l" secondAttribute="bottom" constant="10" id="06M-jz-eCx"/>
+                <constraint firstItem="s6J-8l-DVM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="44H-hS-wUs"/>
+                <constraint firstItem="guT-Pj-7Cp" firstAttribute="top" secondItem="MXK-Uj-yp2" secondAttribute="bottom" constant="40" id="5Dj-hA-ZNW"/>
+                <constraint firstItem="guT-Pj-7Cp" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="7Xo-fa-sII"/>
+                <constraint firstItem="MXK-Uj-yp2" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="8Iw-GF-xrR"/>
+                <constraint firstItem="eBS-bt-G7l" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="BQK-II-UEo"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="guT-Pj-7Cp" secondAttribute="trailing" constant="15" id="Clv-QP-wcd"/>
+                <constraint firstItem="MXK-Uj-yp2" firstAttribute="top" secondItem="s6J-8l-DVM" secondAttribute="bottom" constant="23" id="FOR-6t-1ZK"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="s6J-8l-DVM" secondAttribute="trailing" constant="15" id="hqL-Ln-tMg"/>
+                <constraint firstItem="eBS-bt-G7l" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="43" id="siJ-3O-VSt"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="MXK-Uj-yp2" secondAttribute="trailing" constant="15" id="xb4-eZ-hIo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-416" y="-244"/>
+        </view>
+    </objects>
+</document>

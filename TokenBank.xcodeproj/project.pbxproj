@@ -1,0 +1,1970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032D104AE3B4E748D1A32BF8 /* Pods_TokenBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C950C827551E21A6B69AECE8 /* Pods_TokenBank.framework */; };
+		2C16631D20021D0000E60CBD /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2C16630A20021CFC00E60CBD /* sound.caf */; };
+		2C16632F20025B8100E60CBD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C16632E20025B8100E60CBD /* AVFoundation.framework */; };
+		2C3C953C1FFDF32E005A8F39 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3C953B1FFDF32D005A8F39 /* Accelerate.framework */; };
+		2C3F86551FFD3CBB0065183B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3F86541FFD3CBB0065183B /* Main.storyboard */; };
+		2CB10F282044643A0026F7AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB10F262044643A0026F7AA /* Localizable.strings */; };
+		2CE5C7FA1FF8A2DB008AB801 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5C7F91FF8A2DB008AB801 /* AppDelegate.m */; };
+		2CE5C7FD1FF8A2DB008AB801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5C7FC1FF8A2DB008AB801 /* ViewController.m */; };
+		2CE5C8021FF8A2DB008AB801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5C8011FF8A2DB008AB801 /* Assets.xcassets */; };
+		2CE5C8051FF8A2DB008AB801 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5C8031FF8A2DB008AB801 /* LaunchScreen.storyboard */; };
+		2CE5C8081FF8A2DB008AB801 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5C8071FF8A2DB008AB801 /* main.m */; };
+		2CE5C8141FF8A364008AB801 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE5C8131FF8A364008AB801 /* JavaScriptCore.framework */; };
+		9E40006B21C22F83005B2311 /* TPOSAuthPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E40006921C22F83005B2311 /* TPOSAuthPasswordViewController.xib */; };
+		9E42CAAB21B4FEA800267076 /* TPOSWalletManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAAA21B4FEA800267076 /* TPOSWalletManagerCell.xib */; };
+		9E42CAAD21B4FFC900267076 /* TPOSWalletManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAAC21B4FFC900267076 /* TPOSWalletManagerViewController.xib */; };
+		9E42CAAF21B524EC00267076 /* TPOSAboutUsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAAE21B524EB00267076 /* TPOSAboutUsCell.xib */; };
+		9E42CAB321B9073100267076 /* TPOSExportPrivateKeyNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42CAB121B9073100267076 /* TPOSExportPrivateKeyNoteView.m */; };
+		9E42CAB421B9073100267076 /* TPOSExportPrivateKeyNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAB221B9073100267076 /* TPOSExportPrivateKeyNoteView.xib */; };
+		9E42CAB721BB70A700267076 /* TBShareMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAB521BB70A700267076 /* TBShareMenuView.xib */; };
+		9E42CABA21BB70B400267076 /* TPOSShareMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAB821BB70B400267076 /* TPOSShareMenuView.xib */; };
+		9E42CABD21BB97E500267076 /* TPOSAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CABC21BB97E500267076 /* TPOSAssetCell.xib */; };
+		D063A488218E001500750001 /* jt_wallet.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A477218E001500750001 /* jt_wallet.js */; };
+		D063A489218E001500750001 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A478218E001500750001 /* bundle.js */; };
+		D063A48A218E001500750001 /* jtWallet.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A479218E001500750001 /* jtWallet.html */; };
+		D063A48B218E001500750001 /* jtWeb3.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A47A218E001500750001 /* jtWeb3.html */; };
+		D063A48C218E001500750001 /* TPOSJTPOSalance.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A47D218E001500750001 /* TPOSJTPOSalance.m */; };
+		D063A48D218E001500750001 /* TPOSJTPaymentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A47F218E001500750001 /* TPOSJTPaymentResult.m */; };
+		D063A48E218E001500750001 /* TPOSJTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A481218E001500750001 /* TPOSJTWallet.m */; };
+		D063A48F218E001500750001 /* TPOSJTPaymentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A483218E001500750001 /* TPOSJTPaymentInfo.m */; };
+		D063A490218E001500750001 /* TPOSJTPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A484218E001500750001 /* TPOSJTPayment.m */; };
+		D063A491218E001500750001 /* TPOSJTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A487218E001500750001 /* TPOSJTManager.m */; };
+		D063A4A9218E003300750001 /* TPOSCommonInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A49B218E003300750001 /* TPOSCommonInfoManager.m */; };
+		D063A4AA218E003300750001 /* TPOSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A49D218E003300750001 /* TPOSApiClient.m */; };
+		D063A4B7218E004700750001 /* TPOSWeb3Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4B0218E004700750001 /* TPOSWeb3Handler.m */; };
+		D063A4B8218E004700750001 /* web3.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A4B3218E004700750001 /* web3.html */; };
+		D063A4B9218E004700750001 /* mnemonic.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A4B4218E004700750001 /* mnemonic.html */; };
+		D063A4BA218E004700750001 /* mnemonic.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A4B5218E004700750001 /* mnemonic.js */; };
+		D063A4BB218E004700750001 /* web3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A4B6218E004700750001 /* web3.min.js */; };
+		D063A517218E005400750001 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4DF218E005300750001 /* WebViewJavascriptBridgeBase.m */; };
+		D063A518218E005400750001 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4E0218E005300750001 /* WKWebViewJavascriptBridge.m */; };
+		D063A519218E005400750001 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4E1218E005300750001 /* WebViewJavascriptBridge.m */; };
+		D063A51A218E005400750001 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4E4218E005300750001 /* WebViewJavascriptBridge_JS.m */; };
+		D063A51B218E005400750001 /* TPOSAuthID.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4E8218E005300750001 /* TPOSAuthID.m */; };
+		D063A51C218E005400750001 /* NJOPasswordStrengthEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4EC218E005300750001 /* NJOPasswordStrengthEvaluator.m */; };
+		D063A51D218E005400750001 /* TPOSAlertViewBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4F0218E005300750001 /* TPOSAlertViewBaseAnimation.m */; };
+		D063A51E218E005400750001 /* TPOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4F1218E005300750001 /* TPOSAlertView.m */; };
+		D063A51F218E005400750001 /* YCFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4F4218E005300750001 /* YCFrameAnimator.m */; };
+		D063A520218E005400750001 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D063A4F6218E005300750001 /* TencentOpenAPI.framework */; };
+		D063A521218E005400750001 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4FB218E005300750001 /* SDCycleScrollView.m */; };
+		D063A522218E005400750001 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4FC218E005300750001 /* UIView+SDExtension.m */; };
+		D063A523218E005400750001 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A4FD218E005300750001 /* SDCollectionViewCell.m */; };
+		D063A524218E005400750001 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A500218E005300750001 /* TADotView.m */; };
+		D063A525218E005400750001 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A501218E005300750001 /* TAPageControl.m */; };
+		D063A526218E005400750001 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A502218E005300750001 /* TAAnimatedDotView.m */; };
+		D063A527218E005400750001 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A503218E005300750001 /* TAAbstractDotView.m */; };
+		D063A55E218E005E00750001 /* MJRefreshGifHeader+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A529218E005E00750001 /* MJRefreshGifHeader+TPOS.m */; };
+		D063A55F218E005E00750001 /* UILabel+SpacesAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A52A218E005E00750001 /* UILabel+SpacesAdjust.m */; };
+		D063A560218E005E00750001 /* UINavigationBar+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A52B218E005E00750001 /* UINavigationBar+TPOS.m */; };
+		D063A561218E005E00750001 /* UIImage+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A52D218E005E00750001 /* UIImage+TPOS.m */; };
+		D063A562218E005E00750001 /* TPOSLocalizedHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A52E218E005E00750001 /* TPOSLocalizedHelper.m */; };
+		D063A563218E005E00750001 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A52F218E005E00750001 /* UIColor+Hex.m */; };
+		D063A564218E005E00750001 /* TPOSCameraUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A531218E005E00750001 /* TPOSCameraUtils.m */; };
+		D063A565218E005E00750001 /* UIViewController+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A535218E005E00750001 /* UIViewController+TPOS.m */; };
+		D063A566218E005E00750001 /* TPOSCustomMJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A536218E005E00750001 /* TPOSCustomMJRefreshFooter.m */; };
+		D063A567218E005E00750001 /* TPOSThreadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A53A218E005E00750001 /* TPOSThreadUtils.m */; };
+		D063A568218E005E00750001 /* UIImage+ImageSize.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A53F218E005E00750001 /* UIImage+ImageSize.m */; };
+		D063A569218E005E00750001 /* SGQRCodeHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A540218E005E00750001 /* SGQRCodeHelperTool.m */; };
+		D063A56A218E005E00750001 /* SGQRCodeScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A542218E005E00750001 /* SGQRCodeScanningView.m */; };
+		D063A56B218E005E00750001 /* SGQRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A543218E005E00750001 /* SGQRCodeScanManager.m */; };
+		D063A56C218E005E00750001 /* SGQRCodeGenerateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A544218E005E00750001 /* SGQRCodeGenerateManager.m */; };
+		D063A56D218E005E00750001 /* TPOSQRResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A546218E005E00750001 /* TPOSQRResultHandler.m */; };
+		D063A56E218E005E00750001 /* SGQRCodeAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A54A218E005E00750001 /* SGQRCodeAlbumManager.m */; };
+		D063A56F218E005E00750001 /* TPOSUDIDKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A54E218E005E00750001 /* TPOSUDIDKeyChain.m */; };
+		D063A570218E005E00750001 /* UIView+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A550218E005E00750001 /* UIView+TPOS.m */; };
+		D063A571218E005E00750001 /* NSObject+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A556218E005E00750001 /* NSObject+TPOS.m */; };
+		D063A572218E005E00750001 /* NSDate+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A557218E005E00750001 /* NSDate+TPOS.m */; };
+		D063A573218E005E00750001 /* NSString+TPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A559218E005E00750001 /* NSString+TPOS.m */; };
+		D063A574218E005E00750001 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A55A218E005E00750001 /* NSString+Size.m */; };
+		D063A575218E005E00750001 /* UIDevice+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A55B218E005E00750001 /* UIDevice+Utility.m */; };
+		D063A6C3218E006900750001 /* TPOSTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A587218E006900750001 /* TPOSTransactionViewController.m */; };
+		D063A6C4218E006900750001 /* TPOSChooseTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A588218E006900750001 /* TPOSChooseTokenViewController.m */; };
+		D063A6C5218E006900750001 /* TPOSTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A58B218E006900750001 /* TPOSTransactionDetailViewController.xib */; };
+		D063A6C6218E006900750001 /* TPOSTransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A58D218E006900750001 /* TPOSTransactionDetailViewController.m */; };
+		D063A6C7218E006900750001 /* TPOSTokenDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A58F218E006900750001 /* TPOSTokenDetailViewController.m */; };
+		D063A6C8218E006900750001 /* TPOSTokenDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A590218E006900750001 /* TPOSTokenDetailViewController.xib */; };
+		D063A6CB218E006900750001 /* TPOSScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A598218E006900750001 /* TPOSScanQRCodeViewController.m */; };
+		D063A6CC218E006900750001 /* TPOSQRCodeReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A59B218E006900750001 /* TPOSQRCodeReceiveViewController.m */; };
+		D063A6CE218E006900750001 /* TPOSAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5A0218E006900750001 /* TPOSAssetViewController.m */; };
+		D063A6CF218E006900750001 /* TPOSTokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5A3218E006900750001 /* TPOSTokenModel.m */; };
+		D063A6D1218E006900750001 /* TPOSTokenHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5A8218E006900750001 /* TPOSTokenHistoryModel.m */; };
+		D063A6D2218E006900750001 /* TPOSTransactionTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5AC218E006900750001 /* TPOSTransactionTextField.m */; };
+		D063A6D3218E006900750001 /* TPOSTransactionConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5AD218E006900750001 /* TPOSTransactionConfirmView.m */; };
+		D063A6D5218E006900750001 /* TPOSChooseTokenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5B0218E006900750001 /* TPOSChooseTokenCell.m */; };
+		D063A6D6218E006900750001 /* TPOSTransactionNormalOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5B1218E006900750001 /* TPOSTransactionNormalOptionView.m */; };
+		D063A6D7218E006A00750001 /* TPOSTransactionTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5B4218E006900750001 /* TPOSTransactionTextField.xib */; };
+		D063A6D8218E006A00750001 /* TPOSChooseTokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5B5218E006900750001 /* TPOSChooseTokenCell.xib */; };
+		D063A6D9218E006A00750001 /* TPOSTransactionNormalOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5B6218E006900750001 /* TPOSTransactionNormalOptionView.xib */; };
+		D063A6DC218E006A00750001 /* TPOSTransactionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5C1218E006900750001 /* TPOSTransactionView.m */; };
+		D063A6DD218E006A00750001 /* TPOSTransactionGasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5C3218E006900750001 /* TPOSTransactionGasView.xib */; };
+		D063A6DE218E006A00750001 /* TPOSTransactionHighOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5C4218E006900750001 /* TPOSTransactionHighOptionView.xib */; };
+		D063A6DF218E006A00750001 /* TPOSTransactionGasView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5C5218E006900750001 /* TPOSTransactionGasView.m */; };
+		D063A6E0218E006A00750001 /* TPOSTransactionHighOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5C6218E006900750001 /* TPOSTransactionHighOptionView.m */; };
+		D063A6E1218E006A00750001 /* TPOSTransactionConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5C7218E006900750001 /* TPOSTransactionConfirmView.xib */; };
+		D063A6E2218E006A00750001 /* TPOSAssetPopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5C9218E006900750001 /* TPOSAssetPopWindow.m */; };
+		D063A6E3218E006A00750001 /* TPOSAssetEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5CA218E006900750001 /* TPOSAssetEmptyView.m */; };
+		D063A6E4218E006A00750001 /* TPOSAssetEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5CB218E006900750001 /* TPOSAssetEmptyView.xib */; };
+		D063A6E5218E006A00750001 /* TPOSAssetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5CC218E006900750001 /* TPOSAssetItem.m */; };
+		D063A6E6218E006A00750001 /* TPOSSearchTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5CD218E006900750001 /* TPOSSearchTitleView.m */; };
+		D063A6E7218E006A00750001 /* TPOSAssetHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5CE218E006900750001 /* TPOSAssetHeader.m */; };
+		D063A6E8218E006A00750001 /* TPOSAssetCreateWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5D0218E006900750001 /* TPOSAssetCreateWalletView.m */; };
+		D063A6E9218E006A00750001 /* TPOSAssetAddTokenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5D3218E006900750001 /* TPOSAssetAddTokenCell.m */; };
+		D063A6EC218E006A00750001 /* TPOSAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5D6218E006900750001 /* TPOSAssetCell.m */; };
+		D063A6EE218E006A00750001 /* TPOSAssetAddTokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5D9218E006900750001 /* TPOSAssetAddTokenCell.xib */; };
+		D063A6EF218E006A00750001 /* TPOSTransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5DB218E006900750001 /* TPOSTransactionCell.m */; };
+		D063A6F2218E006A00750001 /* TPOSAssetHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5E0218E006900750001 /* TPOSAssetHeader.xib */; };
+		D063A6F3218E006A00750001 /* TPOSAssetChooseWalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5E1218E006900750001 /* TPOSAssetChooseWalletView.m */; };
+		D063A6F4218E006A00750001 /* TPOSAssetTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5E6218E006900750001 /* TPOSAssetTopView.xib */; };
+		D063A6F5218E006A00750001 /* TPOSAssetPopWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5E7218E006900750001 /* TPOSAssetPopWindow.xib */; };
+		D063A6F6218E006A00750001 /* TPOSAssetCreateWalletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A5E8218E006900750001 /* TPOSAssetCreateWalletView.xib */; };
+		D063A6F7218E006A00750001 /* TPOSSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5EC218E006900750001 /* TPOSSegmentTitleView.m */; };
+		D063A6F8218E006A00750001 /* TPOSPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5ED218E006900750001 /* TPOSPageContentView.m */; };
+		D063A6F9218E006A00750001 /* TPOSAssetTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A5EF218E006900750001 /* TPOSAssetTopView.m */; };
+		D063A706218E006A00750001 /* TPOSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A60F218E006900750001 /* TPOSContext.m */; };
+		D063A707218E006A00750001 /* TPOSRecommendGasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A613218E006900750001 /* TPOSRecommendGasModel.m */; };
+		D063A708218E006A00750001 /* TPOSBlockChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A614218E006900750001 /* TPOSBlockChainModel.m */; };
+		D063A709218E006A00750001 /* TPOSBackupAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A619218E006900750001 /* TPOSBackupAlert.m */; };
+		D063A70A218E006A00750001 /* TPOSBackupAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A61A218E006900750001 /* TPOSBackupAlert.xib */; };
+		D063A70C218E006A00750001 /* TPOSShareCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A620218E006900750001 /* TPOSShareCCell.xib */; };
+		D063A70D218E006A00750001 /* TPOSShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A622218E006900750001 /* TPOSShareView.m */; };
+		D063A70E218E006A00750001 /* TPOSShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A623218E006900750001 /* TPOSShareMenuView.m */; };
+		D063A70F218E006A00750001 /* TPOSShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A625218E006900750001 /* TPOSShareView.xib */; };
+		D063A710218E006A00750001 /* TPOSShareCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A626218E006900750001 /* TPOSShareCCell.m */; };
+		D063A711218E006A00750001 /* TPOSH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A629218E006900750001 /* TPOSH5ViewController.m */; };
+		D063A776218E00C800750001 /* TPOSEnterAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A764218E00C800750001 /* TPOSEnterAuthViewController.m */; };
+		D063A777218E00C800750001 /* TPOSForceCreateWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A765218E00C800750001 /* TPOSForceCreateWalletViewController.m */; };
+		D063A778218E00C800750001 /* TPOSEnterAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A766218E00C800750001 /* TPOSEnterAuthViewController.xib */; };
+		D063A77B218E00C800750001 /* TPOSAuthPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A76D218E00C800750001 /* TPOSAuthPasswordViewController.m */; };
+		D063A77C218E00C800750001 /* TPOSProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A76F218E00C800750001 /* TPOSProtocolViewController.m */; };
+		D063A77D218E00C800750001 /* TPOSProtocolViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A772218E00C800750001 /* TPOSProtocolViewController.xib */; };
+		D063A78B218E00D000750001 /* TPOSGuideCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A782218E00D000750001 /* TPOSGuideCCell.xib */; };
+		D063A78C218E00D000750001 /* TPOSGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A783218E00D000750001 /* TPOSGuideViewController.m */; };
+		D063A78D218E00D000750001 /* TPOSGuideCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A784218E00D000750001 /* TPOSGuideCCell.m */; };
+		D063A78E218E00D000750001 /* TPOSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A786218E00D000750001 /* TPOSBaseViewController.m */; };
+		D063A78F218E00D000750001 /* TPOSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A789218E00D000750001 /* TPOSNavigationController.m */; };
+		D063A790218E00D000750001 /* TPOSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A78A218E00D000750001 /* TPOSTabBarController.m */; };
+		D063A7A0218E00DA00750001 /* TPOSWalletDetailDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A795218E00DA00750001 /* TPOSWalletDetailDao.m */; };
+		D063A7A1218E00DA00750001 /* TPOSBaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A799218E00DA00750001 /* TPOSBaseDao.m */; };
+		D063A7A2218E00DA00750001 /* TPOSWalletDao.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A79A218E00DA00750001 /* TPOSWalletDao.m */; };
+		D063A7A4218E00DA00750001 /* TPOSWalletDetailDaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A79D218E00DA00750001 /* TPOSWalletDetailDaoManager.m */; };
+		D063A7A5218E00DA00750001 /* TPOSDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A79F218E00DA00750001 /* TPOSDataBaseManager.m */; };
+		D063A820218E022800750001 /* TPOSEditWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7AB218E022800750001 /* TPOSEditWalletViewController.xib */; };
+		D063A821218E022800750001 /* TPOSWalletManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7AE218E022800750001 /* TPOSWalletManagerViewController.m */; };
+		D063A822218E022800750001 /* TPOSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7AF218E022800750001 /* TPOSSettingViewController.m */; };
+		D063A825218E022800750001 /* TPOSEditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7B7218E022800750001 /* TPOSEditPasswordViewController.xib */; };
+		D063A827218E022800750001 /* TPOSEditWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7BE218E022800750001 /* TPOSEditWalletViewController.m */; };
+		D063A828218E022800750001 /* TPOSExchangeWalletVewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7BF218E022800750001 /* TPOSExchangeWalletVewController.m */; };
+		D063A829218E022800750001 /* TPOSAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7C0218E022800750001 /* TPOSAboutUsViewController.m */; };
+		D063A82A218E022800750001 /* TPOSConfirmMemonicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7C2218E022800750001 /* TPOSConfirmMemonicViewController.m */; };
+		D063A82B218E022800750001 /* TPOSImportWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7C3218E022800750001 /* TPOSImportWalletViewController.m */; };
+		D063A82C218E022800750001 /* TPOSCreateMemonicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7C4218E022800750001 /* TPOSCreateMemonicViewController.xib */; };
+		D063A82D218E022800750001 /* TPOSMemonicImportWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7C8218E022800750001 /* TPOSMemonicImportWalletViewController.m */; };
+		D063A82E218E022800750001 /* TPOSMemonicImportWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7C9218E022800750001 /* TPOSMemonicImportWalletViewController.xib */; };
+		D063A82F218E022800750001 /* TPOSPrivateKeyImportWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7CC218E022800750001 /* TPOSPrivateKeyImportWalletViewController.xib */; };
+		D063A830218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7CD218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m */; };
+		D063A831218E022800750001 /* TPOSConfirmMemonicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7CE218E022800750001 /* TPOSConfirmMemonicViewController.xib */; };
+		D063A832218E022800750001 /* TPOSCreateWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7D1218E022800750001 /* TPOSCreateWalletViewController.m */; };
+		D063A833218E022800750001 /* TPOSBackupWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7D2218E022800750001 /* TPOSBackupWalletViewController.m */; };
+		D063A834218E022800750001 /* TPOSBackupWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7D4218E022800750001 /* TPOSBackupWalletViewController.xib */; };
+		D063A835218E022800750001 /* TPOSCreateWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7D5218E022800750001 /* TPOSCreateWalletViewController.xib */; };
+		D063A836218E022800750001 /* TPOSSelectChainTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7D9218E022800750001 /* TPOSSelectChainTypeViewController.m */; };
+		D063A837218E022800750001 /* TPOSCreateMemonicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7DB218E022800750001 /* TPOSCreateMemonicViewController.m */; };
+		D063A838218E022800750001 /* TPOSChooseTokenSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7DC218E022800750001 /* TPOSChooseTokenSystemViewController.m */; };
+		D063A839218E022800750001 /* TPOSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7DD218E022800750001 /* TPOSMineViewController.m */; };
+		D063A83A218E022800750001 /* TPOSEditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7E0218E022800750001 /* TPOSEditPasswordViewController.m */; };
+		D063A83B218E022800750001 /* TPOSTransactionRecoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7E2218E022800750001 /* TPOSTransactionRecoderViewController.m */; };
+		D063A83C218E022800750001 /* TPOSLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7E3218E022800750001 /* TPOSLanguageViewController.m */; };
+		D063A83D218E022800750001 /* TPOSWalletModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7E5218E022800750001 /* TPOSWalletModel.m */; };
+		D063A83E218E022800750001 /* TPOSTransactionRecoderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7E8218E022800750001 /* TPOSTransactionRecoderModel.m */; };
+		D063A83F218E022800750001 /* TPOSQRCodeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7EA218E022800750001 /* TPOSQRCodeResult.m */; };
+		D063A843218E022800750001 /* TPOSRetrivePathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A7F6218E022800750001 /* TPOSRetrivePathCell.xib */; };
+		D063A844218E022800750001 /* TPOSWalletManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7F7218E022800750001 /* TPOSWalletManagerCell.m */; };
+		D063A845218E022800750001 /* TPOSTotalAssetHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7F9218E022800750001 /* TPOSTotalAssetHeaderView.m */; };
+		D063A846218E022800750001 /* TPOSWalletChainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7FB218E022800750001 /* TPOSWalletChainCell.m */; };
+		D063A847218E022800750001 /* TPOSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7FC218E022800750001 /* TPOSMineHeader.m */; };
+		D063A848218E022800750001 /* TPOSRetrivePathCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7FD218E022800750001 /* TPOSRetrivePathCell.m */; };
+		D063A849218E022800750001 /* TPOSTransactionRecoderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A7FE218E022800750001 /* TPOSTransactionRecoderCell.m */; };
+		D063A84D218E022800750001 /* TPOSTransactionRecoderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A80A218E022800750001 /* TPOSTransactionRecoderCell.xib */; };
+		D063A84E218E022800750001 /* TPOSMessageCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A80B218E022800750001 /* TPOSMessageCenterCell.xib */; };
+		D063A84F218E022800750001 /* TPOSMessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A80C218E022800750001 /* TPOSMessageCenterCell.m */; };
+		D063A850218E022800750001 /* TPOSWalletChainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A80D218E022800750001 /* TPOSWalletChainCell.xib */; };
+		D063A851218E022800750001 /* TPOSContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A80F218E022800750001 /* TPOSContentView.m */; };
+		D063A852218E022800750001 /* TPOSPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A810218E022800750001 /* TPOSPasswordView.m */; };
+		D063A853218E022800750001 /* TPOSChooseTokenSystemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A813218E022800750001 /* TPOSChooseTokenSystemCell.xib */; };
+		D063A854218E022800750001 /* TPOSChooseTokenSystemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A814218E022800750001 /* TPOSChooseTokenSystemCell.m */; };
+		D063A855218E022800750001 /* TPOSMineHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A817218E022800750001 /* TPOSMineHeader.xib */; };
+		D063A857218E022800750001 /* TPOSAboutUsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A81E218E022800750001 /* TPOSAboutUsCell.m */; };
+		D063A85C218FE22E00750001 /* TPOSForceCreateWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063A85A218FE22E00750001 /* TPOSForceCreateWalletViewController.xib */; };
+		D08DC91D204BE7B3008A27B2 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08DC91C204BE7B3008A27B2 /* TencentOpenAPI.framework */; };
+		D08DC91F204BE81A008A27B2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08DC91E204BE81A008A27B2 /* SystemConfiguration.framework */; };
+		D0F5E117201C9CB700C60EA6 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F5E116201C9CB700C60EA6 /* LocalAuthentication.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2095CE8F77EF64A26AF142DC /* Pods-TokenBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenBank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokenBank/Pods-TokenBank.debug.xcconfig"; sourceTree = "<group>"; };
+		2C16630A20021CFC00E60CBD /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		2C16632E20025B8100E60CBD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2C3C953B1FFDF32D005A8F39 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		2C3F86541FFD3CBB0065183B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2CB10F2A204464480026F7AA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2CE5C7F51FF8A2DB008AB801 /* TokenBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE5C7F81FF8A2DB008AB801 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CE5C7F91FF8A2DB008AB801 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CE5C7FB1FF8A2DB008AB801 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CE5C7FC1FF8A2DB008AB801 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CE5C8011FF8A2DB008AB801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CE5C8041FF8A2DB008AB801 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CE5C8061FF8A2DB008AB801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE5C8071FF8A2DB008AB801 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CE5C8131FF8A364008AB801 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9E40006A21C22F83005B2311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TPOSAuthPasswordViewController.xib; sourceTree = "<group>"; };
+		9E42CAAA21B4FEA800267076 /* TPOSWalletManagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSWalletManagerCell.xib; sourceTree = "<group>"; };
+		9E42CAAC21B4FFC900267076 /* TPOSWalletManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSWalletManagerViewController.xib; sourceTree = "<group>"; };
+		9E42CAAE21B524EB00267076 /* TPOSAboutUsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAboutUsCell.xib; sourceTree = "<group>"; };
+		9E42CAB021B9073100267076 /* TPOSExportPrivateKeyNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSExportPrivateKeyNoteView.h; sourceTree = "<group>"; };
+		9E42CAB121B9073100267076 /* TPOSExportPrivateKeyNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSExportPrivateKeyNoteView.m; sourceTree = "<group>"; };
+		9E42CAB221B9073100267076 /* TPOSExportPrivateKeyNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSExportPrivateKeyNoteView.xib; sourceTree = "<group>"; };
+		9E42CAB621BB70A700267076 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "Share/zh-Hans.lproj/TBShareMenuView.xib"; sourceTree = "<group>"; };
+		9E42CAB921BB70B400267076 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Share/en.lproj/TPOSShareMenuView.xib; sourceTree = "<group>"; };
+		9E42CABB21BB70C600267076 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "Share/zh-Hant.lproj/TBShareMenuView.xib"; sourceTree = "<group>"; };
+		9E42CABC21BB97E500267076 /* TPOSAssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetCell.xib; sourceTree = "<group>"; };
+		9E6ECF1F21C39030008ACEC3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9E6ECF2021C39041008ACEC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C950C827551E21A6B69AECE8 /* Pods_TokenBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokenBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D063A477218E001500750001 /* jt_wallet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jt_wallet.js; sourceTree = "<group>"; };
+		D063A478218E001500750001 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		D063A479218E001500750001 /* jtWallet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jtWallet.html; sourceTree = "<group>"; };
+		D063A47A218E001500750001 /* jtWeb3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jtWeb3.html; sourceTree = "<group>"; };
+		D063A47B218E001500750001 /* TPOSJTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTManager.h; sourceTree = "<group>"; };
+		D063A47D218E001500750001 /* TPOSJTPOSalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPOSalance.m; sourceTree = "<group>"; };
+		D063A47E218E001500750001 /* TPOSJTPaymentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPaymentInfo.h; sourceTree = "<group>"; };
+		D063A47F218E001500750001 /* TPOSJTPaymentResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPaymentResult.m; sourceTree = "<group>"; };
+		D063A480218E001500750001 /* TPOSJTPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPayment.h; sourceTree = "<group>"; };
+		D063A481218E001500750001 /* TPOSJTWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTWallet.m; sourceTree = "<group>"; };
+		D063A482218E001500750001 /* TPOSJTPOSalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPOSalance.h; sourceTree = "<group>"; };
+		D063A483218E001500750001 /* TPOSJTPaymentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPaymentInfo.m; sourceTree = "<group>"; };
+		D063A484218E001500750001 /* TPOSJTPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPayment.m; sourceTree = "<group>"; };
+		D063A485218E001500750001 /* TPOSJTPaymentResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPaymentResult.h; sourceTree = "<group>"; };
+		D063A486218E001500750001 /* TPOSJTWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTWallet.h; sourceTree = "<group>"; };
+		D063A487218E001500750001 /* TPOSJTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTManager.m; sourceTree = "<group>"; };
+		D063A493218E003300750001 /* TPOSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSApiClient.h; sourceTree = "<group>"; };
+		D063A49B218E003300750001 /* TPOSCommonInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCommonInfoManager.m; sourceTree = "<group>"; };
+		D063A49C218E003300750001 /* TPOSCommonInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSCommonInfoManager.h; sourceTree = "<group>"; };
+		D063A49D218E003300750001 /* TPOSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSApiClient.m; sourceTree = "<group>"; };
+		D063A4B0218E004700750001 /* TPOSWeb3Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWeb3Handler.m; sourceTree = "<group>"; };
+		D063A4B1218E004700750001 /* TPOSWeb3Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWeb3Handler.h; sourceTree = "<group>"; };
+		D063A4B3218E004700750001 /* web3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = web3.html; sourceTree = "<group>"; };
+		D063A4B4218E004700750001 /* mnemonic.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mnemonic.html; sourceTree = "<group>"; };
+		D063A4B5218E004700750001 /* mnemonic.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mnemonic.js; sourceTree = "<group>"; };
+		D063A4B6218E004700750001 /* web3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = web3.min.js; sourceTree = "<group>"; };
+		D063A4DF218E005300750001 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		D063A4E0218E005300750001 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		D063A4E1218E005300750001 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		D063A4E2218E005300750001 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		D063A4E3218E005300750001 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		D063A4E4218E005300750001 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		D063A4E5218E005300750001 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		D063A4E6218E005300750001 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		D063A4E8218E005300750001 /* TPOSAuthID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAuthID.m; sourceTree = "<group>"; };
+		D063A4E9218E005300750001 /* TPOSAuthID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAuthID.h; sourceTree = "<group>"; };
+		D063A4EB218E005300750001 /* NJOPasswordStrengthEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJOPasswordStrengthEvaluator.h; sourceTree = "<group>"; };
+		D063A4EC218E005300750001 /* NJOPasswordStrengthEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJOPasswordStrengthEvaluator.m; sourceTree = "<group>"; };
+		D063A4EE218E005300750001 /* TPOSAlertViewBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAlertViewBaseAnimation.h; sourceTree = "<group>"; };
+		D063A4EF218E005300750001 /* TPOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAlertView.h; sourceTree = "<group>"; };
+		D063A4F0218E005300750001 /* TPOSAlertViewBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAlertViewBaseAnimation.m; sourceTree = "<group>"; };
+		D063A4F1218E005300750001 /* TPOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAlertView.m; sourceTree = "<group>"; };
+		D063A4F3218E005300750001 /* YCFrameAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCFrameAnimator.h; sourceTree = "<group>"; };
+		D063A4F4218E005300750001 /* YCFrameAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCFrameAnimator.m; sourceTree = "<group>"; };
+		D063A4F6218E005300750001 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D063A4F8218E005300750001 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		D063A4F9218E005300750001 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		D063A4FA218E005300750001 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		D063A4FB218E005300750001 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		D063A4FC218E005300750001 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		D063A4FD218E005300750001 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		D063A4FF218E005300750001 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		D063A500218E005300750001 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		D063A501218E005300750001 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		D063A502218E005300750001 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		D063A503218E005300750001 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		D063A504218E005300750001 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		D063A505218E005300750001 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		D063A506218E005300750001 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		D063A529218E005E00750001 /* MJRefreshGifHeader+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MJRefreshGifHeader+TPOS.m"; sourceTree = "<group>"; };
+		D063A52A218E005E00750001 /* UILabel+SpacesAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SpacesAdjust.m"; sourceTree = "<group>"; };
+		D063A52B218E005E00750001 /* UINavigationBar+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TPOS.m"; sourceTree = "<group>"; };
+		D063A52C218E005E00750001 /* UIView+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TPOS.h"; sourceTree = "<group>"; };
+		D063A52D218E005E00750001 /* UIImage+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TPOS.m"; sourceTree = "<group>"; };
+		D063A52E218E005E00750001 /* TPOSLocalizedHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSLocalizedHelper.m; sourceTree = "<group>"; };
+		D063A52F218E005E00750001 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		D063A531218E005E00750001 /* TPOSCameraUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCameraUtils.m; sourceTree = "<group>"; };
+		D063A532218E005E00750001 /* TPOSCameraUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSCameraUtils.h; sourceTree = "<group>"; };
+		D063A533218E005E00750001 /* NSDate+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TPOS.h"; sourceTree = "<group>"; };
+		D063A534218E005E00750001 /* NSObject+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPOS.h"; sourceTree = "<group>"; };
+		D063A535218E005E00750001 /* UIViewController+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TPOS.m"; sourceTree = "<group>"; };
+		D063A536218E005E00750001 /* TPOSCustomMJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCustomMJRefreshFooter.m; sourceTree = "<group>"; };
+		D063A537218E005E00750001 /* UIDevice+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Utility.h"; sourceTree = "<group>"; };
+		D063A538218E005E00750001 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		D063A539218E005E00750001 /* NSString+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TPOS.h"; sourceTree = "<group>"; };
+		D063A53A218E005E00750001 /* TPOSThreadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSThreadUtils.m; sourceTree = "<group>"; };
+		D063A53C218E005E00750001 /* SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCode.h; sourceTree = "<group>"; };
+		D063A53E218E005E00750001 /* UIImage+ImageSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageSize.h"; sourceTree = "<group>"; };
+		D063A53F218E005E00750001 /* UIImage+ImageSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageSize.m"; sourceTree = "<group>"; };
+		D063A540218E005E00750001 /* SGQRCodeHelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeHelperTool.m; sourceTree = "<group>"; };
+		D063A541218E005E00750001 /* TPOSQRResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSQRResultHandler.h; sourceTree = "<group>"; };
+		D063A542218E005E00750001 /* SGQRCodeScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanningView.m; sourceTree = "<group>"; };
+		D063A543218E005E00750001 /* SGQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanManager.m; sourceTree = "<group>"; };
+		D063A544218E005E00750001 /* SGQRCodeGenerateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeGenerateManager.m; sourceTree = "<group>"; };
+		D063A545218E005E00750001 /* SGQRCodeAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeAlbumManager.h; sourceTree = "<group>"; };
+		D063A546218E005E00750001 /* TPOSQRResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSQRResultHandler.m; sourceTree = "<group>"; };
+		D063A547218E005E00750001 /* SGQRCodeHelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeHelperTool.h; sourceTree = "<group>"; };
+		D063A548218E005E00750001 /* SGQRCodeScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanningView.h; sourceTree = "<group>"; };
+		D063A549218E005E00750001 /* SGQRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanManager.h; sourceTree = "<group>"; };
+		D063A54A218E005E00750001 /* SGQRCodeAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeAlbumManager.m; sourceTree = "<group>"; };
+		D063A54B218E005E00750001 /* SGQRCodeGenerateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeGenerateManager.h; sourceTree = "<group>"; };
+		D063A54C218E005E00750001 /* UIImage+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TPOS.h"; sourceTree = "<group>"; };
+		D063A54E218E005E00750001 /* TPOSUDIDKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSUDIDKeyChain.m; sourceTree = "<group>"; };
+		D063A54F218E005E00750001 /* TPOSUDIDKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSUDIDKeyChain.h; sourceTree = "<group>"; };
+		D063A550218E005E00750001 /* UIView+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPOS.m"; sourceTree = "<group>"; };
+		D063A551218E005E00750001 /* UINavigationBar+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TPOS.h"; sourceTree = "<group>"; };
+		D063A552218E005E00750001 /* UILabel+SpacesAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SpacesAdjust.h"; sourceTree = "<group>"; };
+		D063A553218E005E00750001 /* MJRefreshGifHeader+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MJRefreshGifHeader+TPOS.h"; sourceTree = "<group>"; };
+		D063A554218E005E00750001 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		D063A555218E005E00750001 /* TPOSLocalizedHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSLocalizedHelper.h; sourceTree = "<group>"; };
+		D063A556218E005E00750001 /* NSObject+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPOS.m"; sourceTree = "<group>"; };
+		D063A557218E005E00750001 /* NSDate+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TPOS.m"; sourceTree = "<group>"; };
+		D063A558218E005E00750001 /* TPOSThreadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSThreadUtils.h; sourceTree = "<group>"; };
+		D063A559218E005E00750001 /* NSString+TPOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TPOS.m"; sourceTree = "<group>"; };
+		D063A55A218E005E00750001 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		D063A55B218E005E00750001 /* UIDevice+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Utility.m"; sourceTree = "<group>"; };
+		D063A55C218E005E00750001 /* TPOSCustomMJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSCustomMJRefreshFooter.h; sourceTree = "<group>"; };
+		D063A55D218E005E00750001 /* UIViewController+TPOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TPOS.h"; sourceTree = "<group>"; };
+		D063A587218E006900750001 /* TPOSTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionViewController.m; sourceTree = "<group>"; };
+		D063A588218E006900750001 /* TPOSChooseTokenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSChooseTokenViewController.m; sourceTree = "<group>"; };
+		D063A589218E006900750001 /* TPOSTransactionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionDetailViewController.h; sourceTree = "<group>"; };
+		D063A58A218E006900750001 /* TPOSTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionViewController.h; sourceTree = "<group>"; };
+		D063A58B218E006900750001 /* TPOSTransactionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		D063A58C218E006900750001 /* TPOSChooseTokenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSChooseTokenViewController.h; sourceTree = "<group>"; };
+		D063A58D218E006900750001 /* TPOSTransactionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionDetailViewController.m; sourceTree = "<group>"; };
+		D063A58F218E006900750001 /* TPOSTokenDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTokenDetailViewController.m; sourceTree = "<group>"; };
+		D063A590218E006900750001 /* TPOSTokenDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTokenDetailViewController.xib; sourceTree = "<group>"; };
+		D063A591218E006900750001 /* TPOSTokenDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTokenDetailViewController.h; sourceTree = "<group>"; };
+		D063A598218E006900750001 /* TPOSScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSScanQRCodeViewController.m; sourceTree = "<group>"; };
+		D063A599218E006900750001 /* TPOSQRCodeReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSQRCodeReceiveViewController.h; sourceTree = "<group>"; };
+		D063A59A218E006900750001 /* TPOSScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSScanQRCodeViewController.h; sourceTree = "<group>"; };
+		D063A59B218E006900750001 /* TPOSQRCodeReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSQRCodeReceiveViewController.m; sourceTree = "<group>"; };
+		D063A5A0218E006900750001 /* TPOSAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetViewController.m; sourceTree = "<group>"; };
+		D063A5A1218E006900750001 /* TPOSAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetViewController.h; sourceTree = "<group>"; };
+		D063A5A3218E006900750001 /* TPOSTokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTokenModel.m; sourceTree = "<group>"; };
+		D063A5A5218E006900750001 /* TPOSTokenHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTokenHistoryModel.h; sourceTree = "<group>"; };
+		D063A5A6218E006900750001 /* TPOSTokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTokenModel.h; sourceTree = "<group>"; };
+		D063A5A8218E006900750001 /* TPOSTokenHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTokenHistoryModel.m; sourceTree = "<group>"; };
+		D063A5AA218E006900750001 /* TPOSAssetChooseWalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetChooseWalletView.h; sourceTree = "<group>"; };
+		D063A5AC218E006900750001 /* TPOSTransactionTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionTextField.m; sourceTree = "<group>"; };
+		D063A5AD218E006900750001 /* TPOSTransactionConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionConfirmView.m; sourceTree = "<group>"; };
+		D063A5B0218E006900750001 /* TPOSChooseTokenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSChooseTokenCell.m; sourceTree = "<group>"; };
+		D063A5B1218E006900750001 /* TPOSTransactionNormalOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionNormalOptionView.m; sourceTree = "<group>"; };
+		D063A5B3218E006900750001 /* TPOSTransactionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionView.h; sourceTree = "<group>"; };
+		D063A5B4218E006900750001 /* TPOSTransactionTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionTextField.xib; sourceTree = "<group>"; };
+		D063A5B5218E006900750001 /* TPOSChooseTokenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSChooseTokenCell.xib; sourceTree = "<group>"; };
+		D063A5B6218E006900750001 /* TPOSTransactionNormalOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionNormalOptionView.xib; sourceTree = "<group>"; };
+		D063A5B7218E006900750001 /* TPOSTransactionHighOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionHighOptionView.h; sourceTree = "<group>"; };
+		D063A5B8218E006900750001 /* TPOSTransactionGasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionGasView.h; sourceTree = "<group>"; };
+		D063A5BD218E006900750001 /* TPOSTransactionNormalOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionNormalOptionView.h; sourceTree = "<group>"; };
+		D063A5BE218E006900750001 /* TPOSChooseTokenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSChooseTokenCell.h; sourceTree = "<group>"; };
+		D063A5BF218E006900750001 /* TPOSTransactionConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionConfirmView.h; sourceTree = "<group>"; };
+		D063A5C0218E006900750001 /* TPOSTransactionTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionTextField.h; sourceTree = "<group>"; };
+		D063A5C1218E006900750001 /* TPOSTransactionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionView.m; sourceTree = "<group>"; };
+		D063A5C3218E006900750001 /* TPOSTransactionGasView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionGasView.xib; sourceTree = "<group>"; };
+		D063A5C4218E006900750001 /* TPOSTransactionHighOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionHighOptionView.xib; sourceTree = "<group>"; };
+		D063A5C5218E006900750001 /* TPOSTransactionGasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionGasView.m; sourceTree = "<group>"; };
+		D063A5C6218E006900750001 /* TPOSTransactionHighOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionHighOptionView.m; sourceTree = "<group>"; };
+		D063A5C7218E006900750001 /* TPOSTransactionConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionConfirmView.xib; sourceTree = "<group>"; };
+		D063A5C8218E006900750001 /* TPOSAssetCreateWalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetCreateWalletView.h; sourceTree = "<group>"; };
+		D063A5C9218E006900750001 /* TPOSAssetPopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetPopWindow.m; sourceTree = "<group>"; };
+		D063A5CA218E006900750001 /* TPOSAssetEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetEmptyView.m; sourceTree = "<group>"; };
+		D063A5CB218E006900750001 /* TPOSAssetEmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetEmptyView.xib; sourceTree = "<group>"; };
+		D063A5CC218E006900750001 /* TPOSAssetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetItem.m; sourceTree = "<group>"; };
+		D063A5CD218E006900750001 /* TPOSSearchTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSSearchTitleView.m; sourceTree = "<group>"; };
+		D063A5CE218E006900750001 /* TPOSAssetHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetHeader.m; sourceTree = "<group>"; };
+		D063A5CF218E006900750001 /* TPOSAssetTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetTopView.h; sourceTree = "<group>"; };
+		D063A5D0218E006900750001 /* TPOSAssetCreateWalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetCreateWalletView.m; sourceTree = "<group>"; };
+		D063A5D2218E006900750001 /* TPOSTransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionCell.h; sourceTree = "<group>"; };
+		D063A5D3218E006900750001 /* TPOSAssetAddTokenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetAddTokenCell.m; sourceTree = "<group>"; };
+		D063A5D6218E006900750001 /* TPOSAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetCell.m; sourceTree = "<group>"; };
+		D063A5D9218E006900750001 /* TPOSAssetAddTokenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetAddTokenCell.xib; sourceTree = "<group>"; };
+		D063A5DA218E006900750001 /* TPOSAssetAddTokenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetAddTokenCell.h; sourceTree = "<group>"; };
+		D063A5DB218E006900750001 /* TPOSTransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionCell.m; sourceTree = "<group>"; };
+		D063A5DD218E006900750001 /* TPOSAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetCell.h; sourceTree = "<group>"; };
+		D063A5E0218E006900750001 /* TPOSAssetHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetHeader.xib; sourceTree = "<group>"; };
+		D063A5E1218E006900750001 /* TPOSAssetChooseWalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetChooseWalletView.m; sourceTree = "<group>"; };
+		D063A5E2218E006900750001 /* TPOSAssetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetItem.h; sourceTree = "<group>"; };
+		D063A5E3218E006900750001 /* TPOSSearchTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSSearchTitleView.h; sourceTree = "<group>"; };
+		D063A5E4218E006900750001 /* TPOSAssetPopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetPopWindow.h; sourceTree = "<group>"; };
+		D063A5E5218E006900750001 /* TPOSAssetEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetEmptyView.h; sourceTree = "<group>"; };
+		D063A5E6218E006900750001 /* TPOSAssetTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetTopView.xib; sourceTree = "<group>"; };
+		D063A5E7218E006900750001 /* TPOSAssetPopWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetPopWindow.xib; sourceTree = "<group>"; };
+		D063A5E8218E006900750001 /* TPOSAssetCreateWalletView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSAssetCreateWalletView.xib; sourceTree = "<group>"; };
+		D063A5EA218E006900750001 /* TPOSScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSScrollContentView.h; sourceTree = "<group>"; };
+		D063A5EB218E006900750001 /* TPOSPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSPageContentView.h; sourceTree = "<group>"; };
+		D063A5EC218E006900750001 /* TPOSSegmentTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSSegmentTitleView.m; sourceTree = "<group>"; };
+		D063A5ED218E006900750001 /* TPOSPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSPageContentView.m; sourceTree = "<group>"; };
+		D063A5EE218E006900750001 /* TPOSSegmentTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSSegmentTitleView.h; sourceTree = "<group>"; };
+		D063A5EF218E006900750001 /* TPOSAssetTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAssetTopView.m; sourceTree = "<group>"; };
+		D063A5F0218E006900750001 /* TPOSAssetHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAssetHeader.h; sourceTree = "<group>"; };
+		D063A60F218E006900750001 /* TPOSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSContext.m; sourceTree = "<group>"; };
+		D063A610218E006900750001 /* TPOSH5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSH5ViewController.h; sourceTree = "<group>"; };
+		D063A611218E006900750001 /* TPOSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSContext.h; sourceTree = "<group>"; };
+		D063A613218E006900750001 /* TPOSRecommendGasModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSRecommendGasModel.m; sourceTree = "<group>"; };
+		D063A614218E006900750001 /* TPOSBlockChainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSBlockChainModel.m; sourceTree = "<group>"; };
+		D063A615218E006900750001 /* TPOSRecommendGasModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSRecommendGasModel.h; sourceTree = "<group>"; };
+		D063A616218E006900750001 /* TPOSBlockChainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSBlockChainModel.h; sourceTree = "<group>"; };
+		D063A619218E006900750001 /* TPOSBackupAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSBackupAlert.m; sourceTree = "<group>"; };
+		D063A61A218E006900750001 /* TPOSBackupAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSBackupAlert.xib; sourceTree = "<group>"; };
+		D063A61B218E006900750001 /* TPOSBackupAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSBackupAlert.h; sourceTree = "<group>"; };
+		D063A620218E006900750001 /* TPOSShareCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSShareCCell.xib; sourceTree = "<group>"; };
+		D063A621218E006900750001 /* TPOSShareCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSShareCCell.h; sourceTree = "<group>"; };
+		D063A622218E006900750001 /* TPOSShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSShareView.m; sourceTree = "<group>"; };
+		D063A623218E006900750001 /* TPOSShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSShareMenuView.m; sourceTree = "<group>"; };
+		D063A625218E006900750001 /* TPOSShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSShareView.xib; sourceTree = "<group>"; };
+		D063A626218E006900750001 /* TPOSShareCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSShareCCell.m; sourceTree = "<group>"; };
+		D063A627218E006900750001 /* TPOSShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSShareMenuView.h; sourceTree = "<group>"; };
+		D063A628218E006900750001 /* TPOSShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSShareView.h; sourceTree = "<group>"; };
+		D063A629218E006900750001 /* TPOSH5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSH5ViewController.m; sourceTree = "<group>"; };
+		D063A762218E00C800750001 /* TPOSAuthPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAuthPasswordViewController.h; sourceTree = "<group>"; };
+		D063A763218E00C800750001 /* TPOSProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSProtocolViewController.h; sourceTree = "<group>"; };
+		D063A764218E00C800750001 /* TPOSEnterAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSEnterAuthViewController.m; sourceTree = "<group>"; };
+		D063A765218E00C800750001 /* TPOSForceCreateWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSForceCreateWalletViewController.m; sourceTree = "<group>"; };
+		D063A766218E00C800750001 /* TPOSEnterAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSEnterAuthViewController.xib; sourceTree = "<group>"; };
+		D063A76D218E00C800750001 /* TPOSAuthPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAuthPasswordViewController.m; sourceTree = "<group>"; };
+		D063A76E218E00C800750001 /* TPOSEnterAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSEnterAuthViewController.h; sourceTree = "<group>"; };
+		D063A76F218E00C800750001 /* TPOSProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSProtocolViewController.m; sourceTree = "<group>"; };
+		D063A772218E00C800750001 /* TPOSProtocolViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSProtocolViewController.xib; sourceTree = "<group>"; };
+		D063A773218E00C800750001 /* TPOSForceCreateWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSForceCreateWalletViewController.h; sourceTree = "<group>"; };
+		D063A780218E00D000750001 /* TPOSGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSGuideViewController.h; sourceTree = "<group>"; };
+		D063A781218E00D000750001 /* TPOSGuideCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSGuideCCell.h; sourceTree = "<group>"; };
+		D063A782218E00D000750001 /* TPOSGuideCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSGuideCCell.xib; sourceTree = "<group>"; };
+		D063A783218E00D000750001 /* TPOSGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSGuideViewController.m; sourceTree = "<group>"; };
+		D063A784218E00D000750001 /* TPOSGuideCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSGuideCCell.m; sourceTree = "<group>"; };
+		D063A785218E00D000750001 /* TPOSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSNavigationController.h; sourceTree = "<group>"; };
+		D063A786218E00D000750001 /* TPOSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSBaseViewController.m; sourceTree = "<group>"; };
+		D063A787218E00D000750001 /* TPOSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTabBarController.h; sourceTree = "<group>"; };
+		D063A788218E00D000750001 /* TPOSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSBaseViewController.h; sourceTree = "<group>"; };
+		D063A789218E00D000750001 /* TPOSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSNavigationController.m; sourceTree = "<group>"; };
+		D063A78A218E00D000750001 /* TPOSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTabBarController.m; sourceTree = "<group>"; };
+		D063A792218E00DA00750001 /* TPOSDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSDataBaseManager.h; sourceTree = "<group>"; };
+		D063A794218E00DA00750001 /* TPOSBaseDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSBaseDao.h; sourceTree = "<group>"; };
+		D063A795218E00DA00750001 /* TPOSWalletDetailDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletDetailDao.m; sourceTree = "<group>"; };
+		D063A797218E00DA00750001 /* TPOSWalletDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletDao.h; sourceTree = "<group>"; };
+		D063A798218E00DA00750001 /* TPOSWalletDetailDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletDetailDao.h; sourceTree = "<group>"; };
+		D063A799218E00DA00750001 /* TPOSBaseDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSBaseDao.m; sourceTree = "<group>"; };
+		D063A79A218E00DA00750001 /* TPOSWalletDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletDao.m; sourceTree = "<group>"; };
+		D063A79D218E00DA00750001 /* TPOSWalletDetailDaoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletDetailDaoManager.m; sourceTree = "<group>"; };
+		D063A79E218E00DA00750001 /* TPOSWalletDetailDaoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletDetailDaoManager.h; sourceTree = "<group>"; };
+		D063A79F218E00DA00750001 /* TPOSDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSDataBaseManager.m; sourceTree = "<group>"; };
+		D063A7A6218E00E400750001 /* TPOSMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPOSMacro.h; sourceTree = "<group>"; };
+		D063A7AB218E022800750001 /* TPOSEditWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSEditWalletViewController.xib; sourceTree = "<group>"; };
+		D063A7AC218E022800750001 /* TPOSEditWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSEditWalletViewController.h; sourceTree = "<group>"; };
+		D063A7AE218E022800750001 /* TPOSWalletManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletManagerViewController.m; sourceTree = "<group>"; };
+		D063A7AF218E022800750001 /* TPOSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSSettingViewController.m; sourceTree = "<group>"; };
+		D063A7B0218E022800750001 /* TPOSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSMineViewController.h; sourceTree = "<group>"; };
+		D063A7B1218E022800750001 /* TPOSAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAboutUsViewController.h; sourceTree = "<group>"; };
+		D063A7B5218E022800750001 /* TPOSExchangeWalletVewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSExchangeWalletVewController.h; sourceTree = "<group>"; };
+		D063A7B7218E022800750001 /* TPOSEditPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSEditPasswordViewController.xib; sourceTree = "<group>"; };
+		D063A7B8218E022800750001 /* TPOSEditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSEditPasswordViewController.h; sourceTree = "<group>"; };
+		D063A7B9218E022800750001 /* TPOSLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSLanguageViewController.h; sourceTree = "<group>"; };
+		D063A7BA218E022800750001 /* TPOSTransactionRecoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionRecoderViewController.h; sourceTree = "<group>"; };
+		D063A7BE218E022800750001 /* TPOSEditWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSEditWalletViewController.m; sourceTree = "<group>"; };
+		D063A7BF218E022800750001 /* TPOSExchangeWalletVewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSExchangeWalletVewController.m; sourceTree = "<group>"; };
+		D063A7C0218E022800750001 /* TPOSAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAboutUsViewController.m; sourceTree = "<group>"; };
+		D063A7C2218E022800750001 /* TPOSConfirmMemonicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSConfirmMemonicViewController.m; sourceTree = "<group>"; };
+		D063A7C3218E022800750001 /* TPOSImportWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSImportWalletViewController.m; sourceTree = "<group>"; };
+		D063A7C4218E022800750001 /* TPOSCreateMemonicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSCreateMemonicViewController.xib; sourceTree = "<group>"; };
+		D063A7C7218E022800750001 /* TPOSMemonicImportWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSMemonicImportWalletViewController.h; sourceTree = "<group>"; };
+		D063A7C8218E022800750001 /* TPOSMemonicImportWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSMemonicImportWalletViewController.m; sourceTree = "<group>"; };
+		D063A7C9218E022800750001 /* TPOSMemonicImportWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSMemonicImportWalletViewController.xib; sourceTree = "<group>"; };
+		D063A7CB218E022800750001 /* TPOSPrivateKeyImportWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSPrivateKeyImportWalletViewController.h; sourceTree = "<group>"; };
+		D063A7CC218E022800750001 /* TPOSPrivateKeyImportWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSPrivateKeyImportWalletViewController.xib; sourceTree = "<group>"; };
+		D063A7CD218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSPrivateKeyImportWalletViewController.m; sourceTree = "<group>"; };
+		D063A7CE218E022800750001 /* TPOSConfirmMemonicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSConfirmMemonicViewController.xib; sourceTree = "<group>"; };
+		D063A7CF218E022800750001 /* TPOSCreateMemonicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSCreateMemonicViewController.h; sourceTree = "<group>"; };
+		D063A7D0218E022800750001 /* TPOSSelectChainTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSSelectChainTypeViewController.h; sourceTree = "<group>"; };
+		D063A7D1218E022800750001 /* TPOSCreateWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCreateWalletViewController.m; sourceTree = "<group>"; };
+		D063A7D2218E022800750001 /* TPOSBackupWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSBackupWalletViewController.m; sourceTree = "<group>"; };
+		D063A7D3218E022800750001 /* TPOSChooseTokenSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSChooseTokenSystemViewController.h; sourceTree = "<group>"; };
+		D063A7D4218E022800750001 /* TPOSBackupWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSBackupWalletViewController.xib; sourceTree = "<group>"; };
+		D063A7D5218E022800750001 /* TPOSCreateWalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSCreateWalletViewController.xib; sourceTree = "<group>"; };
+		D063A7D6218E022800750001 /* TPOSImportWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSImportWalletViewController.h; sourceTree = "<group>"; };
+		D063A7D7218E022800750001 /* TPOSConfirmMemonicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSConfirmMemonicViewController.h; sourceTree = "<group>"; };
+		D063A7D8218E022800750001 /* TPOSBackupWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSBackupWalletViewController.h; sourceTree = "<group>"; };
+		D063A7D9218E022800750001 /* TPOSSelectChainTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSSelectChainTypeViewController.m; sourceTree = "<group>"; };
+		D063A7DA218E022800750001 /* TPOSCreateWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSCreateWalletViewController.h; sourceTree = "<group>"; };
+		D063A7DB218E022800750001 /* TPOSCreateMemonicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCreateMemonicViewController.m; sourceTree = "<group>"; };
+		D063A7DC218E022800750001 /* TPOSChooseTokenSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSChooseTokenSystemViewController.m; sourceTree = "<group>"; };
+		D063A7DD218E022800750001 /* TPOSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSMineViewController.m; sourceTree = "<group>"; };
+		D063A7DE218E022800750001 /* TPOSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSSettingViewController.h; sourceTree = "<group>"; };
+		D063A7DF218E022800750001 /* TPOSWalletManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletManagerViewController.h; sourceTree = "<group>"; };
+		D063A7E0218E022800750001 /* TPOSEditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSEditPasswordViewController.m; sourceTree = "<group>"; };
+		D063A7E2218E022800750001 /* TPOSTransactionRecoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionRecoderViewController.m; sourceTree = "<group>"; };
+		D063A7E3218E022800750001 /* TPOSLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSLanguageViewController.m; sourceTree = "<group>"; };
+		D063A7E5218E022800750001 /* TPOSWalletModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletModel.m; sourceTree = "<group>"; };
+		D063A7E6218E022800750001 /* TPOSTransactionRecoderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionRecoderModel.h; sourceTree = "<group>"; };
+		D063A7E7218E022800750001 /* TPOSQRCodeResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSQRCodeResult.h; sourceTree = "<group>"; };
+		D063A7E8218E022800750001 /* TPOSTransactionRecoderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionRecoderModel.m; sourceTree = "<group>"; };
+		D063A7E9218E022800750001 /* TPOSWalletModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletModel.h; sourceTree = "<group>"; };
+		D063A7EA218E022800750001 /* TPOSQRCodeResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSQRCodeResult.m; sourceTree = "<group>"; };
+		D063A7F2218E022800750001 /* TPOSMessageCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSMessageCenterCell.h; sourceTree = "<group>"; };
+		D063A7F6218E022800750001 /* TPOSRetrivePathCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSRetrivePathCell.xib; sourceTree = "<group>"; };
+		D063A7F7218E022800750001 /* TPOSWalletManagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletManagerCell.m; sourceTree = "<group>"; };
+		D063A7F9218E022800750001 /* TPOSTotalAssetHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTotalAssetHeaderView.m; sourceTree = "<group>"; };
+		D063A7FA218E022800750001 /* TPOSTotalAssetHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTotalAssetHeaderView.h; sourceTree = "<group>"; };
+		D063A7FB218E022800750001 /* TPOSWalletChainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSWalletChainCell.m; sourceTree = "<group>"; };
+		D063A7FC218E022800750001 /* TPOSMineHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSMineHeader.m; sourceTree = "<group>"; };
+		D063A7FD218E022800750001 /* TPOSRetrivePathCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSRetrivePathCell.m; sourceTree = "<group>"; };
+		D063A7FE218E022800750001 /* TPOSTransactionRecoderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSTransactionRecoderCell.m; sourceTree = "<group>"; };
+		D063A800218E022800750001 /* TPOSAboutUsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSAboutUsCell.h; sourceTree = "<group>"; };
+		D063A80A218E022800750001 /* TPOSTransactionRecoderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSTransactionRecoderCell.xib; sourceTree = "<group>"; };
+		D063A80B218E022800750001 /* TPOSMessageCenterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSMessageCenterCell.xib; sourceTree = "<group>"; };
+		D063A80C218E022800750001 /* TPOSMessageCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSMessageCenterCell.m; sourceTree = "<group>"; };
+		D063A80D218E022800750001 /* TPOSWalletChainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSWalletChainCell.xib; sourceTree = "<group>"; };
+		D063A80F218E022800750001 /* TPOSContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSContentView.m; sourceTree = "<group>"; };
+		D063A810218E022800750001 /* TPOSPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSPasswordView.m; sourceTree = "<group>"; };
+		D063A812218E022800750001 /* TPOSChooseTokenSystemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSChooseTokenSystemCell.h; sourceTree = "<group>"; };
+		D063A813218E022800750001 /* TPOSChooseTokenSystemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSChooseTokenSystemCell.xib; sourceTree = "<group>"; };
+		D063A814218E022800750001 /* TPOSChooseTokenSystemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSChooseTokenSystemCell.m; sourceTree = "<group>"; };
+		D063A815218E022800750001 /* TPOSContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSContentView.h; sourceTree = "<group>"; };
+		D063A816218E022800750001 /* TPOSPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSPasswordView.h; sourceTree = "<group>"; };
+		D063A817218E022800750001 /* TPOSMineHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPOSMineHeader.xib; sourceTree = "<group>"; };
+		D063A818218E022800750001 /* TPOSWalletManagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletManagerCell.h; sourceTree = "<group>"; };
+		D063A81A218E022800750001 /* TPOSTransactionRecoderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSTransactionRecoderCell.h; sourceTree = "<group>"; };
+		D063A81B218E022800750001 /* TPOSRetrivePathCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSRetrivePathCell.h; sourceTree = "<group>"; };
+		D063A81C218E022800750001 /* TPOSMineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSMineHeader.h; sourceTree = "<group>"; };
+		D063A81D218E022800750001 /* TPOSWalletChainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSWalletChainCell.h; sourceTree = "<group>"; };
+		D063A81E218E022800750001 /* TPOSAboutUsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSAboutUsCell.m; sourceTree = "<group>"; };
+		D063A85B218FE22E00750001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TPOSForceCreateWalletViewController.xib; sourceTree = "<group>"; };
+		D08DC91C204BE7B3008A27B2 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = TokenBank/Vendor/Tencent/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D08DC91E204BE81A008A27B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0F5E116201C9CB700C60EA6 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		D641099E16AC91DF64091C7F /* Pods-TokenBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenBank.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokenBank/Pods-TokenBank.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CE5C7F21FF8A2DB008AB801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08DC91F204BE81A008A27B2 /* SystemConfiguration.framework in Frameworks */,
+				D063A520218E005400750001 /* TencentOpenAPI.framework in Frameworks */,
+				D0F5E117201C9CB700C60EA6 /* LocalAuthentication.framework in Frameworks */,
+				D08DC91D204BE7B3008A27B2 /* TencentOpenAPI.framework in Frameworks */,
+				2C16632F20025B8100E60CBD /* AVFoundation.framework in Frameworks */,
+				2C3C953C1FFDF32E005A8F39 /* Accelerate.framework in Frameworks */,
+				2CE5C8141FF8A364008AB801 /* JavaScriptCore.framework in Frameworks */,
+				032D104AE3B4E748D1A32BF8 /* Pods_TokenBank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CE5C7EC1FF8A2DB008AB801 = {
+			isa = PBXGroup;
+			children = (
+				2CE5C99E1FFA1388008AB801 /* Resource */,
+				2CE5C7F71FF8A2DB008AB801 /* TokenBank */,
+				2CE5C7F61FF8A2DB008AB801 /* Products */,
+				2CE5C8121FF8A364008AB801 /* Frameworks */,
+				81190AF66985E792F79DC4E6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		2CE5C7F61FF8A2DB008AB801 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CE5C7F51FF8A2DB008AB801 /* TokenBank.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CE5C7F71FF8A2DB008AB801 /* TokenBank */ = {
+			isa = PBXGroup;
+			children = (
+				D063A791218E00DA00750001 /* DB */,
+				D063A77E218E00D000750001 /* Basic */,
+				D063A75B218E00C800750001 /* CommonControllers */,
+				D063A576218E006900750001 /* TabControllers */,
+				D063A528218E005E00750001 /* Utils */,
+				D063A4BC218E005300750001 /* Vendor */,
+				D063A4AE218E004700750001 /* Web3Source */,
+				D063A492218E003300750001 /* Network */,
+				D063A475218E001500750001 /* JTum */,
+				2CE5C7F81FF8A2DB008AB801 /* AppDelegate.h */,
+				2CE5C7F91FF8A2DB008AB801 /* AppDelegate.m */,
+				D063A7A6218E00E400750001 /* TPOSMacro.h */,
+				2CE5C7FB1FF8A2DB008AB801 /* ViewController.h */,
+				2CE5C7FC1FF8A2DB008AB801 /* ViewController.m */,
+				2C3F86541FFD3CBB0065183B /* Main.storyboard */,
+				2CE5C8031FF8A2DB008AB801 /* LaunchScreen.storyboard */,
+				2CE5C8061FF8A2DB008AB801 /* Info.plist */,
+				2CE5C8071FF8A2DB008AB801 /* main.m */,
+			);
+			path = TokenBank;
+			sourceTree = "<group>";
+		};
+		2CE5C8121FF8A364008AB801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08DC91E204BE81A008A27B2 /* SystemConfiguration.framework */,
+				D08DC91C204BE7B3008A27B2 /* TencentOpenAPI.framework */,
+				D0F5E116201C9CB700C60EA6 /* LocalAuthentication.framework */,
+				2C16632E20025B8100E60CBD /* AVFoundation.framework */,
+				2C3C953B1FFDF32D005A8F39 /* Accelerate.framework */,
+				2CE5C8131FF8A364008AB801 /* JavaScriptCore.framework */,
+				C950C827551E21A6B69AECE8 /* Pods_TokenBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CE5C99E1FFA1388008AB801 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2CB10F262044643A0026F7AA /* Localizable.strings */,
+				2C16630A20021CFC00E60CBD /* sound.caf */,
+				2CE5C8011FF8A2DB008AB801 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		81190AF66985E792F79DC4E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2095CE8F77EF64A26AF142DC /* Pods-TokenBank.debug.xcconfig */,
+				D641099E16AC91DF64091C7F /* Pods-TokenBank.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D063A475218E001500750001 /* JTum */ = {
+			isa = PBXGroup;
+			children = (
+				D063A47C218E001500750001 /* Model */,
+				D063A476218E001500750001 /* JTJS */,
+				D063A47B218E001500750001 /* TPOSJTManager.h */,
+				D063A487218E001500750001 /* TPOSJTManager.m */,
+			);
+			path = JTum;
+			sourceTree = "<group>";
+		};
+		D063A476218E001500750001 /* JTJS */ = {
+			isa = PBXGroup;
+			children = (
+				D063A477218E001500750001 /* jt_wallet.js */,
+				D063A478218E001500750001 /* bundle.js */,
+				D063A479218E001500750001 /* jtWallet.html */,
+				D063A47A218E001500750001 /* jtWeb3.html */,
+			);
+			path = JTJS;
+			sourceTree = "<group>";
+		};
+		D063A47C218E001500750001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D063A47D218E001500750001 /* TPOSJTPOSalance.m */,
+				D063A47E218E001500750001 /* TPOSJTPaymentInfo.h */,
+				D063A47F218E001500750001 /* TPOSJTPaymentResult.m */,
+				D063A480218E001500750001 /* TPOSJTPayment.h */,
+				D063A481218E001500750001 /* TPOSJTWallet.m */,
+				D063A482218E001500750001 /* TPOSJTPOSalance.h */,
+				D063A483218E001500750001 /* TPOSJTPaymentInfo.m */,
+				D063A484218E001500750001 /* TPOSJTPayment.m */,
+				D063A485218E001500750001 /* TPOSJTPaymentResult.h */,
+				D063A486218E001500750001 /* TPOSJTWallet.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D063A492218E003300750001 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D063A493218E003300750001 /* TPOSApiClient.h */,
+				D063A49A218E003300750001 /* APPConfig */,
+				D063A49D218E003300750001 /* TPOSApiClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D063A49A218E003300750001 /* APPConfig */ = {
+			isa = PBXGroup;
+			children = (
+				D063A49B218E003300750001 /* TPOSCommonInfoManager.m */,
+				D063A49C218E003300750001 /* TPOSCommonInfoManager.h */,
+			);
+			path = APPConfig;
+			sourceTree = "<group>";
+		};
+		D063A4AE218E004700750001 /* Web3Source */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4AF218E004700750001 /* Handler */,
+				D063A4B2218E004700750001 /* Resource */,
+			);
+			path = Web3Source;
+			sourceTree = "<group>";
+		};
+		D063A4AF218E004700750001 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4B0218E004700750001 /* TPOSWeb3Handler.m */,
+				D063A4B1218E004700750001 /* TPOSWeb3Handler.h */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		D063A4B2218E004700750001 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4B3218E004700750001 /* web3.html */,
+				D063A4B4218E004700750001 /* mnemonic.html */,
+				D063A4B5218E004700750001 /* mnemonic.js */,
+				D063A4B6218E004700750001 /* web3.min.js */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D063A4BC218E005300750001 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4DE218E005300750001 /* WebViewJavascriptBridge */,
+				D063A4E7218E005300750001 /* Auth */,
+				D063A4EA218E005300750001 /* PasswordStrength */,
+				D063A4ED218E005300750001 /* AlertView */,
+				D063A4F2218E005300750001 /* YCFrameAnimator */,
+				D063A4F5218E005300750001 /* Tencent */,
+				D063A4F7218E005300750001 /* SDCycleScrollView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		D063A4DE218E005300750001 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4DF218E005300750001 /* WebViewJavascriptBridgeBase.m */,
+				D063A4E0218E005300750001 /* WKWebViewJavascriptBridge.m */,
+				D063A4E1218E005300750001 /* WebViewJavascriptBridge.m */,
+				D063A4E2218E005300750001 /* WebViewJavascriptBridge_JS.h */,
+				D063A4E3218E005300750001 /* WebViewJavascriptBridgeBase.h */,
+				D063A4E4218E005300750001 /* WebViewJavascriptBridge_JS.m */,
+				D063A4E5218E005300750001 /* WebViewJavascriptBridge.h */,
+				D063A4E6218E005300750001 /* WKWebViewJavascriptBridge.h */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		D063A4E7218E005300750001 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4E8218E005300750001 /* TPOSAuthID.m */,
+				D063A4E9218E005300750001 /* TPOSAuthID.h */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D063A4EA218E005300750001 /* PasswordStrength */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4EB218E005300750001 /* NJOPasswordStrengthEvaluator.h */,
+				D063A4EC218E005300750001 /* NJOPasswordStrengthEvaluator.m */,
+			);
+			path = PasswordStrength;
+			sourceTree = "<group>";
+		};
+		D063A4ED218E005300750001 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4EE218E005300750001 /* TPOSAlertViewBaseAnimation.h */,
+				D063A4EF218E005300750001 /* TPOSAlertView.h */,
+				D063A4F0218E005300750001 /* TPOSAlertViewBaseAnimation.m */,
+				D063A4F1218E005300750001 /* TPOSAlertView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		D063A4F2218E005300750001 /* YCFrameAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4F3218E005300750001 /* YCFrameAnimator.h */,
+				D063A4F4218E005300750001 /* YCFrameAnimator.m */,
+			);
+			path = YCFrameAnimator;
+			sourceTree = "<group>";
+		};
+		D063A4F5218E005300750001 /* Tencent */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4F6218E005300750001 /* TencentOpenAPI.framework */,
+			);
+			path = Tencent;
+			sourceTree = "<group>";
+		};
+		D063A4F7218E005300750001 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4F8218E005300750001 /* UIView+SDExtension.h */,
+				D063A4F9218E005300750001 /* SDCycleScrollView.h */,
+				D063A4FA218E005300750001 /* SDCollectionViewCell.h */,
+				D063A4FB218E005300750001 /* SDCycleScrollView.m */,
+				D063A4FC218E005300750001 /* UIView+SDExtension.m */,
+				D063A4FD218E005300750001 /* SDCollectionViewCell.m */,
+				D063A4FE218E005300750001 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		D063A4FE218E005300750001 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				D063A4FF218E005300750001 /* TAAbstractDotView.h */,
+				D063A500218E005300750001 /* TADotView.m */,
+				D063A501218E005300750001 /* TAPageControl.m */,
+				D063A502218E005300750001 /* TAAnimatedDotView.m */,
+				D063A503218E005300750001 /* TAAbstractDotView.m */,
+				D063A504218E005300750001 /* TADotView.h */,
+				D063A505218E005300750001 /* TAAnimatedDotView.h */,
+				D063A506218E005300750001 /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		D063A528218E005E00750001 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D063A529218E005E00750001 /* MJRefreshGifHeader+TPOS.m */,
+				D063A52A218E005E00750001 /* UILabel+SpacesAdjust.m */,
+				D063A52B218E005E00750001 /* UINavigationBar+TPOS.m */,
+				D063A52C218E005E00750001 /* UIView+TPOS.h */,
+				D063A52D218E005E00750001 /* UIImage+TPOS.m */,
+				D063A52E218E005E00750001 /* TPOSLocalizedHelper.m */,
+				D063A52F218E005E00750001 /* UIColor+Hex.m */,
+				D063A530218E005E00750001 /* Camera */,
+				D063A533218E005E00750001 /* NSDate+TPOS.h */,
+				D063A534218E005E00750001 /* NSObject+TPOS.h */,
+				D063A535218E005E00750001 /* UIViewController+TPOS.m */,
+				D063A536218E005E00750001 /* TPOSCustomMJRefreshFooter.m */,
+				D063A537218E005E00750001 /* UIDevice+Utility.h */,
+				D063A538218E005E00750001 /* NSString+Size.h */,
+				D063A539218E005E00750001 /* NSString+TPOS.h */,
+				D063A53A218E005E00750001 /* TPOSThreadUtils.m */,
+				D063A53B218E005E00750001 /* QRCode */,
+				D063A54C218E005E00750001 /* UIImage+TPOS.h */,
+				D063A54D218E005E00750001 /* UDID */,
+				D063A550218E005E00750001 /* UIView+TPOS.m */,
+				D063A551218E005E00750001 /* UINavigationBar+TPOS.h */,
+				D063A552218E005E00750001 /* UILabel+SpacesAdjust.h */,
+				D063A553218E005E00750001 /* MJRefreshGifHeader+TPOS.h */,
+				D063A554218E005E00750001 /* UIColor+Hex.h */,
+				D063A555218E005E00750001 /* TPOSLocalizedHelper.h */,
+				D063A556218E005E00750001 /* NSObject+TPOS.m */,
+				D063A557218E005E00750001 /* NSDate+TPOS.m */,
+				D063A558218E005E00750001 /* TPOSThreadUtils.h */,
+				D063A559218E005E00750001 /* NSString+TPOS.m */,
+				D063A55A218E005E00750001 /* NSString+Size.m */,
+				D063A55B218E005E00750001 /* UIDevice+Utility.m */,
+				D063A55C218E005E00750001 /* TPOSCustomMJRefreshFooter.h */,
+				D063A55D218E005E00750001 /* UIViewController+TPOS.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D063A530218E005E00750001 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D063A531218E005E00750001 /* TPOSCameraUtils.m */,
+				D063A532218E005E00750001 /* TPOSCameraUtils.h */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		D063A53B218E005E00750001 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D063A53C218E005E00750001 /* SGQRCode.h */,
+				D063A53D218E005E00750001 /* Category */,
+				D063A540218E005E00750001 /* SGQRCodeHelperTool.m */,
+				D063A541218E005E00750001 /* TPOSQRResultHandler.h */,
+				D063A542218E005E00750001 /* SGQRCodeScanningView.m */,
+				D063A543218E005E00750001 /* SGQRCodeScanManager.m */,
+				D063A544218E005E00750001 /* SGQRCodeGenerateManager.m */,
+				D063A545218E005E00750001 /* SGQRCodeAlbumManager.h */,
+				D063A546218E005E00750001 /* TPOSQRResultHandler.m */,
+				D063A547218E005E00750001 /* SGQRCodeHelperTool.h */,
+				D063A548218E005E00750001 /* SGQRCodeScanningView.h */,
+				D063A549218E005E00750001 /* SGQRCodeScanManager.h */,
+				D063A54A218E005E00750001 /* SGQRCodeAlbumManager.m */,
+				D063A54B218E005E00750001 /* SGQRCodeGenerateManager.h */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		D063A53D218E005E00750001 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D063A53E218E005E00750001 /* UIImage+ImageSize.h */,
+				D063A53F218E005E00750001 /* UIImage+ImageSize.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D063A54D218E005E00750001 /* UDID */ = {
+			isa = PBXGroup;
+			children = (
+				D063A54E218E005E00750001 /* TPOSUDIDKeyChain.m */,
+				D063A54F218E005E00750001 /* TPOSUDIDKeyChain.h */,
+			);
+			path = UDID;
+			sourceTree = "<group>";
+		};
+		D063A576218E006900750001 /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7A7218E022800750001 /* Mine */,
+				D063A584218E006900750001 /* Asset */,
+				D063A60E218E006900750001 /* Common */,
+			);
+			path = TabControllers;
+			sourceTree = "<group>";
+		};
+		D063A584218E006900750001 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				D063A585218E006900750001 /* Controller */,
+				D063A5A2218E006900750001 /* Model */,
+				D063A5A9218E006900750001 /* View */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		D063A585218E006900750001 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D063A586218E006900750001 /* Transaction */,
+				D063A58E218E006900750001 /* TokenDetail */,
+				D063A597218E006900750001 /* QRCode */,
+				D063A59F218E006900750001 /* Main */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D063A586218E006900750001 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				D063A587218E006900750001 /* TPOSTransactionViewController.m */,
+				D063A588218E006900750001 /* TPOSChooseTokenViewController.m */,
+				D063A589218E006900750001 /* TPOSTransactionDetailViewController.h */,
+				D063A58A218E006900750001 /* TPOSTransactionViewController.h */,
+				D063A58B218E006900750001 /* TPOSTransactionDetailViewController.xib */,
+				D063A58C218E006900750001 /* TPOSChooseTokenViewController.h */,
+				D063A58D218E006900750001 /* TPOSTransactionDetailViewController.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		D063A58E218E006900750001 /* TokenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D063A58F218E006900750001 /* TPOSTokenDetailViewController.m */,
+				D063A590218E006900750001 /* TPOSTokenDetailViewController.xib */,
+				D063A591218E006900750001 /* TPOSTokenDetailViewController.h */,
+			);
+			path = TokenDetail;
+			sourceTree = "<group>";
+		};
+		D063A597218E006900750001 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D063A598218E006900750001 /* TPOSScanQRCodeViewController.m */,
+				D063A599218E006900750001 /* TPOSQRCodeReceiveViewController.h */,
+				D063A59A218E006900750001 /* TPOSScanQRCodeViewController.h */,
+				D063A59B218E006900750001 /* TPOSQRCodeReceiveViewController.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		D063A59F218E006900750001 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D063A5A0218E006900750001 /* TPOSAssetViewController.m */,
+				D063A5A1218E006900750001 /* TPOSAssetViewController.h */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D063A5A2218E006900750001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D063A5A3218E006900750001 /* TPOSTokenModel.m */,
+				D063A5A5218E006900750001 /* TPOSTokenHistoryModel.h */,
+				D063A5A6218E006900750001 /* TPOSTokenModel.h */,
+				D063A5A8218E006900750001 /* TPOSTokenHistoryModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D063A5A9218E006900750001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D063A5AA218E006900750001 /* TPOSAssetChooseWalletView.h */,
+				D063A5AB218E006900750001 /* Transaction */,
+				D063A5C8218E006900750001 /* TPOSAssetCreateWalletView.h */,
+				D063A5C9218E006900750001 /* TPOSAssetPopWindow.m */,
+				D063A5CA218E006900750001 /* TPOSAssetEmptyView.m */,
+				D063A5CB218E006900750001 /* TPOSAssetEmptyView.xib */,
+				D063A5CC218E006900750001 /* TPOSAssetItem.m */,
+				D063A5CD218E006900750001 /* TPOSSearchTitleView.m */,
+				D063A5CE218E006900750001 /* TPOSAssetHeader.m */,
+				D063A5CF218E006900750001 /* TPOSAssetTopView.h */,
+				D063A5D0218E006900750001 /* TPOSAssetCreateWalletView.m */,
+				D063A5D1218E006900750001 /* Cell */,
+				D063A5E0218E006900750001 /* TPOSAssetHeader.xib */,
+				D063A5E1218E006900750001 /* TPOSAssetChooseWalletView.m */,
+				D063A5E2218E006900750001 /* TPOSAssetItem.h */,
+				D063A5E3218E006900750001 /* TPOSSearchTitleView.h */,
+				D063A5E4218E006900750001 /* TPOSAssetPopWindow.h */,
+				D063A5E5218E006900750001 /* TPOSAssetEmptyView.h */,
+				D063A5E6218E006900750001 /* TPOSAssetTopView.xib */,
+				D063A5E7218E006900750001 /* TPOSAssetPopWindow.xib */,
+				D063A5E8218E006900750001 /* TPOSAssetCreateWalletView.xib */,
+				D063A5E9218E006900750001 /* ScrollContentView */,
+				D063A5EF218E006900750001 /* TPOSAssetTopView.m */,
+				D063A5F0218E006900750001 /* TPOSAssetHeader.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D063A5AB218E006900750001 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				D063A5AC218E006900750001 /* TPOSTransactionTextField.m */,
+				D063A5AD218E006900750001 /* TPOSTransactionConfirmView.m */,
+				D063A5B0218E006900750001 /* TPOSChooseTokenCell.m */,
+				D063A5B1218E006900750001 /* TPOSTransactionNormalOptionView.m */,
+				D063A5B3218E006900750001 /* TPOSTransactionView.h */,
+				D063A5B4218E006900750001 /* TPOSTransactionTextField.xib */,
+				D063A5B5218E006900750001 /* TPOSChooseTokenCell.xib */,
+				D063A5B6218E006900750001 /* TPOSTransactionNormalOptionView.xib */,
+				D063A5B7218E006900750001 /* TPOSTransactionHighOptionView.h */,
+				D063A5B8218E006900750001 /* TPOSTransactionGasView.h */,
+				D063A5BD218E006900750001 /* TPOSTransactionNormalOptionView.h */,
+				D063A5BE218E006900750001 /* TPOSChooseTokenCell.h */,
+				D063A5BF218E006900750001 /* TPOSTransactionConfirmView.h */,
+				D063A5C0218E006900750001 /* TPOSTransactionTextField.h */,
+				D063A5C1218E006900750001 /* TPOSTransactionView.m */,
+				D063A5C3218E006900750001 /* TPOSTransactionGasView.xib */,
+				D063A5C4218E006900750001 /* TPOSTransactionHighOptionView.xib */,
+				D063A5C5218E006900750001 /* TPOSTransactionGasView.m */,
+				D063A5C6218E006900750001 /* TPOSTransactionHighOptionView.m */,
+				D063A5C7218E006900750001 /* TPOSTransactionConfirmView.xib */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		D063A5D1218E006900750001 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E42CABC21BB97E500267076 /* TPOSAssetCell.xib */,
+				D063A5D2218E006900750001 /* TPOSTransactionCell.h */,
+				D063A5D3218E006900750001 /* TPOSAssetAddTokenCell.m */,
+				D063A5D6218E006900750001 /* TPOSAssetCell.m */,
+				D063A5D9218E006900750001 /* TPOSAssetAddTokenCell.xib */,
+				D063A5DA218E006900750001 /* TPOSAssetAddTokenCell.h */,
+				D063A5DB218E006900750001 /* TPOSTransactionCell.m */,
+				D063A5DD218E006900750001 /* TPOSAssetCell.h */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D063A5E9218E006900750001 /* ScrollContentView */ = {
+			isa = PBXGroup;
+			children = (
+				D063A5EA218E006900750001 /* TPOSScrollContentView.h */,
+				D063A5EB218E006900750001 /* TPOSPageContentView.h */,
+				D063A5EC218E006900750001 /* TPOSSegmentTitleView.m */,
+				D063A5ED218E006900750001 /* TPOSPageContentView.m */,
+				D063A5EE218E006900750001 /* TPOSSegmentTitleView.h */,
+			);
+			path = ScrollContentView;
+			sourceTree = "<group>";
+		};
+		D063A60E218E006900750001 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D063A60F218E006900750001 /* TPOSContext.m */,
+				D063A610218E006900750001 /* TPOSH5ViewController.h */,
+				D063A611218E006900750001 /* TPOSContext.h */,
+				D063A612218E006900750001 /* Model */,
+				D063A617218E006900750001 /* View */,
+				D063A629218E006900750001 /* TPOSH5ViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D063A612218E006900750001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D063A613218E006900750001 /* TPOSRecommendGasModel.m */,
+				D063A614218E006900750001 /* TPOSBlockChainModel.m */,
+				D063A615218E006900750001 /* TPOSRecommendGasModel.h */,
+				D063A616218E006900750001 /* TPOSBlockChainModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D063A617218E006900750001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E42CAB821BB70B400267076 /* TPOSShareMenuView.xib */,
+				9E42CAB521BB70A700267076 /* TBShareMenuView.xib */,
+				D063A618218E006900750001 /* Backup */,
+				D063A61C218E006900750001 /* Share */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D063A618218E006900750001 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				D063A619218E006900750001 /* TPOSBackupAlert.m */,
+				D063A61A218E006900750001 /* TPOSBackupAlert.xib */,
+				D063A61B218E006900750001 /* TPOSBackupAlert.h */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		D063A61C218E006900750001 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				D063A620218E006900750001 /* TPOSShareCCell.xib */,
+				D063A621218E006900750001 /* TPOSShareCCell.h */,
+				D063A622218E006900750001 /* TPOSShareView.m */,
+				D063A623218E006900750001 /* TPOSShareMenuView.m */,
+				D063A625218E006900750001 /* TPOSShareView.xib */,
+				D063A626218E006900750001 /* TPOSShareCCell.m */,
+				D063A627218E006900750001 /* TPOSShareMenuView.h */,
+				D063A628218E006900750001 /* TPOSShareView.h */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		D063A75B218E00C800750001 /* CommonControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E40006921C22F83005B2311 /* TPOSAuthPasswordViewController.xib */,
+				D063A762218E00C800750001 /* TPOSAuthPasswordViewController.h */,
+				D063A763218E00C800750001 /* TPOSProtocolViewController.h */,
+				D063A764218E00C800750001 /* TPOSEnterAuthViewController.m */,
+				D063A765218E00C800750001 /* TPOSForceCreateWalletViewController.m */,
+				D063A766218E00C800750001 /* TPOSEnterAuthViewController.xib */,
+				D063A76D218E00C800750001 /* TPOSAuthPasswordViewController.m */,
+				D063A76E218E00C800750001 /* TPOSEnterAuthViewController.h */,
+				D063A76F218E00C800750001 /* TPOSProtocolViewController.m */,
+				D063A772218E00C800750001 /* TPOSProtocolViewController.xib */,
+				D063A773218E00C800750001 /* TPOSForceCreateWalletViewController.h */,
+				D063A85A218FE22E00750001 /* TPOSForceCreateWalletViewController.xib */,
+			);
+			path = CommonControllers;
+			sourceTree = "<group>";
+		};
+		D063A77E218E00D000750001 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				D063A77F218E00D000750001 /* Guide */,
+				D063A785218E00D000750001 /* TPOSNavigationController.h */,
+				D063A786218E00D000750001 /* TPOSBaseViewController.m */,
+				D063A787218E00D000750001 /* TPOSTabBarController.h */,
+				D063A788218E00D000750001 /* TPOSBaseViewController.h */,
+				D063A789218E00D000750001 /* TPOSNavigationController.m */,
+				D063A78A218E00D000750001 /* TPOSTabBarController.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		D063A77F218E00D000750001 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				D063A780218E00D000750001 /* TPOSGuideViewController.h */,
+				D063A781218E00D000750001 /* TPOSGuideCCell.h */,
+				D063A782218E00D000750001 /* TPOSGuideCCell.xib */,
+				D063A783218E00D000750001 /* TPOSGuideViewController.m */,
+				D063A784218E00D000750001 /* TPOSGuideCCell.m */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		D063A791218E00DA00750001 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				D063A792218E00DA00750001 /* TPOSDataBaseManager.h */,
+				D063A793218E00DA00750001 /* Dao */,
+				D063A79C218E00DA00750001 /* DaoManager */,
+				D063A79F218E00DA00750001 /* TPOSDataBaseManager.m */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		D063A793218E00DA00750001 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				D063A794218E00DA00750001 /* TPOSBaseDao.h */,
+				D063A795218E00DA00750001 /* TPOSWalletDetailDao.m */,
+				D063A797218E00DA00750001 /* TPOSWalletDao.h */,
+				D063A798218E00DA00750001 /* TPOSWalletDetailDao.h */,
+				D063A799218E00DA00750001 /* TPOSBaseDao.m */,
+				D063A79A218E00DA00750001 /* TPOSWalletDao.m */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		D063A79C218E00DA00750001 /* DaoManager */ = {
+			isa = PBXGroup;
+			children = (
+				D063A79D218E00DA00750001 /* TPOSWalletDetailDaoManager.m */,
+				D063A79E218E00DA00750001 /* TPOSWalletDetailDaoManager.h */,
+			);
+			path = DaoManager;
+			sourceTree = "<group>";
+		};
+		D063A7A7218E022800750001 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7A8218E022800750001 /* Controller */,
+				D063A7E4218E022800750001 /* Model */,
+				D063A7EB218E022800750001 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		D063A7A8218E022800750001 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E42CAAC21B4FFC900267076 /* TPOSWalletManagerViewController.xib */,
+				D063A7AB218E022800750001 /* TPOSEditWalletViewController.xib */,
+				D063A7AC218E022800750001 /* TPOSEditWalletViewController.h */,
+				D063A7AE218E022800750001 /* TPOSWalletManagerViewController.m */,
+				D063A7AF218E022800750001 /* TPOSSettingViewController.m */,
+				D063A7B0218E022800750001 /* TPOSMineViewController.h */,
+				D063A7B1218E022800750001 /* TPOSAboutUsViewController.h */,
+				D063A7B5218E022800750001 /* TPOSExchangeWalletVewController.h */,
+				D063A7B7218E022800750001 /* TPOSEditPasswordViewController.xib */,
+				D063A7B8218E022800750001 /* TPOSEditPasswordViewController.h */,
+				D063A7B9218E022800750001 /* TPOSLanguageViewController.h */,
+				D063A7BA218E022800750001 /* TPOSTransactionRecoderViewController.h */,
+				D063A7BE218E022800750001 /* TPOSEditWalletViewController.m */,
+				D063A7BF218E022800750001 /* TPOSExchangeWalletVewController.m */,
+				D063A7C0218E022800750001 /* TPOSAboutUsViewController.m */,
+				D063A7C1218E022800750001 /* Wallet */,
+				D063A7DD218E022800750001 /* TPOSMineViewController.m */,
+				D063A7DE218E022800750001 /* TPOSSettingViewController.h */,
+				D063A7DF218E022800750001 /* TPOSWalletManagerViewController.h */,
+				D063A7E0218E022800750001 /* TPOSEditPasswordViewController.m */,
+				D063A7E2218E022800750001 /* TPOSTransactionRecoderViewController.m */,
+				D063A7E3218E022800750001 /* TPOSLanguageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D063A7C1218E022800750001 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7C2218E022800750001 /* TPOSConfirmMemonicViewController.m */,
+				D063A7C3218E022800750001 /* TPOSImportWalletViewController.m */,
+				D063A7C4218E022800750001 /* TPOSCreateMemonicViewController.xib */,
+				D063A7C5218E022800750001 /* ImportWallet */,
+				D063A7CE218E022800750001 /* TPOSConfirmMemonicViewController.xib */,
+				D063A7CF218E022800750001 /* TPOSCreateMemonicViewController.h */,
+				D063A7D0218E022800750001 /* TPOSSelectChainTypeViewController.h */,
+				D063A7D1218E022800750001 /* TPOSCreateWalletViewController.m */,
+				D063A7D2218E022800750001 /* TPOSBackupWalletViewController.m */,
+				D063A7D3218E022800750001 /* TPOSChooseTokenSystemViewController.h */,
+				D063A7D4218E022800750001 /* TPOSBackupWalletViewController.xib */,
+				D063A7D5218E022800750001 /* TPOSCreateWalletViewController.xib */,
+				D063A7D6218E022800750001 /* TPOSImportWalletViewController.h */,
+				D063A7D7218E022800750001 /* TPOSConfirmMemonicViewController.h */,
+				D063A7D8218E022800750001 /* TPOSBackupWalletViewController.h */,
+				D063A7D9218E022800750001 /* TPOSSelectChainTypeViewController.m */,
+				D063A7DA218E022800750001 /* TPOSCreateWalletViewController.h */,
+				D063A7DB218E022800750001 /* TPOSCreateMemonicViewController.m */,
+				D063A7DC218E022800750001 /* TPOSChooseTokenSystemViewController.m */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		D063A7C5218E022800750001 /* ImportWallet */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7C6218E022800750001 /* Memonic */,
+				D063A7CA218E022800750001 /* PK */,
+			);
+			path = ImportWallet;
+			sourceTree = "<group>";
+		};
+		D063A7C6218E022800750001 /* Memonic */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7C7218E022800750001 /* TPOSMemonicImportWalletViewController.h */,
+				D063A7C8218E022800750001 /* TPOSMemonicImportWalletViewController.m */,
+				D063A7C9218E022800750001 /* TPOSMemonicImportWalletViewController.xib */,
+			);
+			path = Memonic;
+			sourceTree = "<group>";
+		};
+		D063A7CA218E022800750001 /* PK */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7CB218E022800750001 /* TPOSPrivateKeyImportWalletViewController.h */,
+				D063A7CC218E022800750001 /* TPOSPrivateKeyImportWalletViewController.xib */,
+				D063A7CD218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m */,
+			);
+			path = PK;
+			sourceTree = "<group>";
+		};
+		D063A7E4218E022800750001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7E5218E022800750001 /* TPOSWalletModel.m */,
+				D063A7E6218E022800750001 /* TPOSTransactionRecoderModel.h */,
+				D063A7E7218E022800750001 /* TPOSQRCodeResult.h */,
+				D063A7E8218E022800750001 /* TPOSTransactionRecoderModel.m */,
+				D063A7E9218E022800750001 /* TPOSWalletModel.h */,
+				D063A7EA218E022800750001 /* TPOSQRCodeResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D063A7EB218E022800750001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E42CAB021B9073100267076 /* TPOSExportPrivateKeyNoteView.h */,
+				9E42CAB121B9073100267076 /* TPOSExportPrivateKeyNoteView.m */,
+				9E42CAB221B9073100267076 /* TPOSExportPrivateKeyNoteView.xib */,
+				9E42CAAE21B524EB00267076 /* TPOSAboutUsCell.xib */,
+				9E42CAAA21B4FEA800267076 /* TPOSWalletManagerCell.xib */,
+				D063A7F2218E022800750001 /* TPOSMessageCenterCell.h */,
+				D063A7F6218E022800750001 /* TPOSRetrivePathCell.xib */,
+				D063A7F7218E022800750001 /* TPOSWalletManagerCell.m */,
+				D063A7F8218E022800750001 /* Asset */,
+				D063A7FB218E022800750001 /* TPOSWalletChainCell.m */,
+				D063A7FC218E022800750001 /* TPOSMineHeader.m */,
+				D063A7FD218E022800750001 /* TPOSRetrivePathCell.m */,
+				D063A7FE218E022800750001 /* TPOSTransactionRecoderCell.m */,
+				D063A800218E022800750001 /* TPOSAboutUsCell.h */,
+				D063A80A218E022800750001 /* TPOSTransactionRecoderCell.xib */,
+				D063A80B218E022800750001 /* TPOSMessageCenterCell.xib */,
+				D063A80C218E022800750001 /* TPOSMessageCenterCell.m */,
+				D063A80D218E022800750001 /* TPOSWalletChainCell.xib */,
+				D063A80E218E022800750001 /* Wallet */,
+				D063A817218E022800750001 /* TPOSMineHeader.xib */,
+				D063A818218E022800750001 /* TPOSWalletManagerCell.h */,
+				D063A81A218E022800750001 /* TPOSTransactionRecoderCell.h */,
+				D063A81B218E022800750001 /* TPOSRetrivePathCell.h */,
+				D063A81C218E022800750001 /* TPOSMineHeader.h */,
+				D063A81D218E022800750001 /* TPOSWalletChainCell.h */,
+				D063A81E218E022800750001 /* TPOSAboutUsCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D063A7F8218E022800750001 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				D063A7F9218E022800750001 /* TPOSTotalAssetHeaderView.m */,
+				D063A7FA218E022800750001 /* TPOSTotalAssetHeaderView.h */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		D063A80E218E022800750001 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				D063A80F218E022800750001 /* TPOSContentView.m */,
+				D063A810218E022800750001 /* TPOSPasswordView.m */,
+				D063A811218E022800750001 /* Cell */,
+				D063A815218E022800750001 /* TPOSContentView.h */,
+				D063A816218E022800750001 /* TPOSPasswordView.h */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		D063A811218E022800750001 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D063A812218E022800750001 /* TPOSChooseTokenSystemCell.h */,
+				D063A813218E022800750001 /* TPOSChooseTokenSystemCell.xib */,
+				D063A814218E022800750001 /* TPOSChooseTokenSystemCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CE5C7F41FF8A2DB008AB801 /* TokenBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE5C80B1FF8A2DB008AB801 /* Build configuration list for PBXNativeTarget "TokenBank" */;
+			buildPhases = (
+				38BDA3A6BBB325E9D151E202 /* [CP] Check Pods Manifest.lock */,
+				2CE5C7F11FF8A2DB008AB801 /* Sources */,
+				2CE5C7F21FF8A2DB008AB801 /* Frameworks */,
+				2CE5C7F31FF8A2DB008AB801 /* Resources */,
+				AD84992DEF8422C6BE451B1F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TokenBank;
+			productName = TokenBank;
+			productReference = 2CE5C7F51FF8A2DB008AB801 /* TokenBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CE5C7ED1FF8A2DB008AB801 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = MarcusWoo;
+				TargetAttributes = {
+					2CE5C7F41FF8A2DB008AB801 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2CE5C7F01FF8A2DB008AB801 /* Build configuration list for PBXProject "TokenBank" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"zh-Hans",
+				en,
+				"zh-Hant",
+			);
+			mainGroup = 2CE5C7EC1FF8A2DB008AB801;
+			productRefGroup = 2CE5C7F61FF8A2DB008AB801 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CE5C7F41FF8A2DB008AB801 /* TokenBank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CE5C7F31FF8A2DB008AB801 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D063A6DD218E006A00750001 /* TPOSTransactionGasView.xib in Resources */,
+				D063A4B8218E004700750001 /* web3.html in Resources */,
+				D063A778218E00C800750001 /* TPOSEnterAuthViewController.xib in Resources */,
+				D063A4BB218E004700750001 /* web3.min.js in Resources */,
+				D063A835218E022800750001 /* TPOSCreateWalletViewController.xib in Resources */,
+				D063A6F4218E006A00750001 /* TPOSAssetTopView.xib in Resources */,
+				D063A6F6218E006A00750001 /* TPOSAssetCreateWalletView.xib in Resources */,
+				D063A6F5218E006A00750001 /* TPOSAssetPopWindow.xib in Resources */,
+				D063A6E1218E006A00750001 /* TPOSTransactionConfirmView.xib in Resources */,
+				D063A6D9218E006A00750001 /* TPOSTransactionNormalOptionView.xib in Resources */,
+				9E42CAAD21B4FFC900267076 /* TPOSWalletManagerViewController.xib in Resources */,
+				D063A6E4218E006A00750001 /* TPOSAssetEmptyView.xib in Resources */,
+				D063A70F218E006A00750001 /* TPOSShareView.xib in Resources */,
+				D063A834218E022800750001 /* TPOSBackupWalletViewController.xib in Resources */,
+				D063A6C8218E006900750001 /* TPOSTokenDetailViewController.xib in Resources */,
+				D063A6D7218E006A00750001 /* TPOSTransactionTextField.xib in Resources */,
+				D063A4B9218E004700750001 /* mnemonic.html in Resources */,
+				D063A84E218E022800750001 /* TPOSMessageCenterCell.xib in Resources */,
+				D063A70A218E006A00750001 /* TPOSBackupAlert.xib in Resources */,
+				2CB10F282044643A0026F7AA /* Localizable.strings in Resources */,
+				D063A84D218E022800750001 /* TPOSTransactionRecoderCell.xib in Resources */,
+				2CE5C8051FF8A2DB008AB801 /* LaunchScreen.storyboard in Resources */,
+				D063A6EE218E006A00750001 /* TPOSAssetAddTokenCell.xib in Resources */,
+				9E42CAAB21B4FEA800267076 /* TPOSWalletManagerCell.xib in Resources */,
+				9E42CABD21BB97E500267076 /* TPOSAssetCell.xib in Resources */,
+				2C16631D20021D0000E60CBD /* sound.caf in Resources */,
+				D063A6C5218E006900750001 /* TPOSTransactionDetailViewController.xib in Resources */,
+				D063A82E218E022800750001 /* TPOSMemonicImportWalletViewController.xib in Resources */,
+				D063A4BA218E004700750001 /* mnemonic.js in Resources */,
+				9E42CAB721BB70A700267076 /* TBShareMenuView.xib in Resources */,
+				9E40006B21C22F83005B2311 /* TPOSAuthPasswordViewController.xib in Resources */,
+				D063A831218E022800750001 /* TPOSConfirmMemonicViewController.xib in Resources */,
+				D063A77D218E00C800750001 /* TPOSProtocolViewController.xib in Resources */,
+				D063A825218E022800750001 /* TPOSEditPasswordViewController.xib in Resources */,
+				D063A6D8218E006A00750001 /* TPOSChooseTokenCell.xib in Resources */,
+				D063A850218E022800750001 /* TPOSWalletChainCell.xib in Resources */,
+				9E42CAAF21B524EC00267076 /* TPOSAboutUsCell.xib in Resources */,
+				D063A820218E022800750001 /* TPOSEditWalletViewController.xib in Resources */,
+				D063A843218E022800750001 /* TPOSRetrivePathCell.xib in Resources */,
+				D063A70C218E006A00750001 /* TPOSShareCCell.xib in Resources */,
+				2CE5C8021FF8A2DB008AB801 /* Assets.xcassets in Resources */,
+				D063A48B218E001500750001 /* jtWeb3.html in Resources */,
+				D063A48A218E001500750001 /* jtWallet.html in Resources */,
+				D063A488218E001500750001 /* jt_wallet.js in Resources */,
+				D063A6F2218E006A00750001 /* TPOSAssetHeader.xib in Resources */,
+				9E42CAB421B9073100267076 /* TPOSExportPrivateKeyNoteView.xib in Resources */,
+				2C3F86551FFD3CBB0065183B /* Main.storyboard in Resources */,
+				D063A82F218E022800750001 /* TPOSPrivateKeyImportWalletViewController.xib in Resources */,
+				D063A78B218E00D000750001 /* TPOSGuideCCell.xib in Resources */,
+				D063A853218E022800750001 /* TPOSChooseTokenSystemCell.xib in Resources */,
+				D063A85C218FE22E00750001 /* TPOSForceCreateWalletViewController.xib in Resources */,
+				D063A6DE218E006A00750001 /* TPOSTransactionHighOptionView.xib in Resources */,
+				D063A489218E001500750001 /* bundle.js in Resources */,
+				D063A82C218E022800750001 /* TPOSCreateMemonicViewController.xib in Resources */,
+				D063A855218E022800750001 /* TPOSMineHeader.xib in Resources */,
+				9E42CABA21BB70B400267076 /* TPOSShareMenuView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38BDA3A6BBB325E9D151E202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TokenBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD84992DEF8422C6BE451B1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TokenBank/Pods-TokenBank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TokenBank/Pods-TokenBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CE5C7F11FF8A2DB008AB801 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D063A84F218E022800750001 /* TPOSMessageCenterCell.m in Sources */,
+				D063A563218E005E00750001 /* UIColor+Hex.m in Sources */,
+				D063A857218E022800750001 /* TPOSAboutUsCell.m in Sources */,
+				D063A711218E006A00750001 /* TPOSH5ViewController.m in Sources */,
+				D063A77B218E00C800750001 /* TPOSAuthPasswordViewController.m in Sources */,
+				D063A48C218E001500750001 /* TPOSJTPOSalance.m in Sources */,
+				D063A70E218E006A00750001 /* TPOSShareMenuView.m in Sources */,
+				D063A56E218E005E00750001 /* SGQRCodeAlbumManager.m in Sources */,
+				D063A6F7218E006A00750001 /* TPOSSegmentTitleView.m in Sources */,
+				D063A777218E00C800750001 /* TPOSForceCreateWalletViewController.m in Sources */,
+				D063A6CB218E006900750001 /* TPOSScanQRCodeViewController.m in Sources */,
+				D063A6C3218E006900750001 /* TPOSTransactionViewController.m in Sources */,
+				D063A851218E022800750001 /* TPOSContentView.m in Sources */,
+				D063A849218E022800750001 /* TPOSTransactionRecoderCell.m in Sources */,
+				D063A708218E006A00750001 /* TPOSBlockChainModel.m in Sources */,
+				2CE5C7FD1FF8A2DB008AB801 /* ViewController.m in Sources */,
+				D063A6E6218E006A00750001 /* TPOSSearchTitleView.m in Sources */,
+				D063A6E0218E006A00750001 /* TPOSTransactionHighOptionView.m in Sources */,
+				D063A82D218E022800750001 /* TPOSMemonicImportWalletViewController.m in Sources */,
+				D063A6C7218E006900750001 /* TPOSTokenDetailViewController.m in Sources */,
+				D063A83D218E022800750001 /* TPOSWalletModel.m in Sources */,
+				D063A51A218E005400750001 /* WebViewJavascriptBridge_JS.m in Sources */,
+				D063A847218E022800750001 /* TPOSMineHeader.m in Sources */,
+				D063A845218E022800750001 /* TPOSTotalAssetHeaderView.m in Sources */,
+				D063A573218E005E00750001 /* NSString+TPOS.m in Sources */,
+				D063A521218E005400750001 /* SDCycleScrollView.m in Sources */,
+				D063A490218E001500750001 /* TPOSJTPayment.m in Sources */,
+				D063A70D218E006A00750001 /* TPOSShareView.m in Sources */,
+				D063A6E7218E006A00750001 /* TPOSAssetHeader.m in Sources */,
+				D063A837218E022800750001 /* TPOSCreateMemonicViewController.m in Sources */,
+				D063A51D218E005400750001 /* TPOSAlertViewBaseAnimation.m in Sources */,
+				D063A83A218E022800750001 /* TPOSEditPasswordViewController.m in Sources */,
+				D063A4AA218E003300750001 /* TPOSApiClient.m in Sources */,
+				D063A83C218E022800750001 /* TPOSLanguageViewController.m in Sources */,
+				D063A565218E005E00750001 /* UIViewController+TPOS.m in Sources */,
+				D063A6D6218E006900750001 /* TPOSTransactionNormalOptionView.m in Sources */,
+				D063A561218E005E00750001 /* UIImage+TPOS.m in Sources */,
+				D063A571218E005E00750001 /* NSObject+TPOS.m in Sources */,
+				D063A832218E022800750001 /* TPOSCreateWalletViewController.m in Sources */,
+				D063A524218E005400750001 /* TADotView.m in Sources */,
+				D063A51B218E005400750001 /* TPOSAuthID.m in Sources */,
+				D063A828218E022800750001 /* TPOSExchangeWalletVewController.m in Sources */,
+				D063A517218E005400750001 /* WebViewJavascriptBridgeBase.m in Sources */,
+				D063A6F8218E006A00750001 /* TPOSPageContentView.m in Sources */,
+				D063A6CE218E006900750001 /* TPOSAssetViewController.m in Sources */,
+				D063A568218E005E00750001 /* UIImage+ImageSize.m in Sources */,
+				D063A844218E022800750001 /* TPOSWalletManagerCell.m in Sources */,
+				D063A776218E00C800750001 /* TPOSEnterAuthViewController.m in Sources */,
+				D063A523218E005400750001 /* SDCollectionViewCell.m in Sources */,
+				D063A83E218E022800750001 /* TPOSTransactionRecoderModel.m in Sources */,
+				D063A83B218E022800750001 /* TPOSTransactionRecoderViewController.m in Sources */,
+				D063A56B218E005E00750001 /* SGQRCodeScanManager.m in Sources */,
+				D063A567218E005E00750001 /* TPOSThreadUtils.m in Sources */,
+				D063A560218E005E00750001 /* UINavigationBar+TPOS.m in Sources */,
+				D063A78D218E00D000750001 /* TPOSGuideCCell.m in Sources */,
+				D063A82B218E022800750001 /* TPOSImportWalletViewController.m in Sources */,
+				D063A707218E006A00750001 /* TPOSRecommendGasModel.m in Sources */,
+				D063A491218E001500750001 /* TPOSJTManager.m in Sources */,
+				D063A854218E022800750001 /* TPOSChooseTokenSystemCell.m in Sources */,
+				D063A7A2218E00DA00750001 /* TPOSWalletDao.m in Sources */,
+				D063A527218E005400750001 /* TAAbstractDotView.m in Sources */,
+				D063A6E5218E006A00750001 /* TPOSAssetItem.m in Sources */,
+				D063A525218E005400750001 /* TAPageControl.m in Sources */,
+				D063A56C218E005E00750001 /* SGQRCodeGenerateManager.m in Sources */,
+				D063A78F218E00D000750001 /* TPOSNavigationController.m in Sources */,
+				D063A6EC218E006A00750001 /* TPOSAssetCell.m in Sources */,
+				D063A7A4218E00DA00750001 /* TPOSWalletDetailDaoManager.m in Sources */,
+				D063A82A218E022800750001 /* TPOSConfirmMemonicViewController.m in Sources */,
+				D063A51F218E005400750001 /* YCFrameAnimator.m in Sources */,
+				D063A6D3218E006900750001 /* TPOSTransactionConfirmView.m in Sources */,
+				D063A6DF218E006A00750001 /* TPOSTransactionGasView.m in Sources */,
+				D063A6CC218E006900750001 /* TPOSQRCodeReceiveViewController.m in Sources */,
+				D063A6E2218E006A00750001 /* TPOSAssetPopWindow.m in Sources */,
+				D063A848218E022800750001 /* TPOSRetrivePathCell.m in Sources */,
+				D063A572218E005E00750001 /* NSDate+TPOS.m in Sources */,
+				D063A575218E005E00750001 /* UIDevice+Utility.m in Sources */,
+				D063A852218E022800750001 /* TPOSPasswordView.m in Sources */,
+				D063A6F9218E006A00750001 /* TPOSAssetTopView.m in Sources */,
+				D063A55F218E005E00750001 /* UILabel+SpacesAdjust.m in Sources */,
+				D063A822218E022800750001 /* TPOSSettingViewController.m in Sources */,
+				D063A829218E022800750001 /* TPOSAboutUsViewController.m in Sources */,
+				D063A519218E005400750001 /* WebViewJavascriptBridge.m in Sources */,
+				D063A7A1218E00DA00750001 /* TPOSBaseDao.m in Sources */,
+				2CE5C8081FF8A2DB008AB801 /* main.m in Sources */,
+				D063A562218E005E00750001 /* TPOSLocalizedHelper.m in Sources */,
+				D063A846218E022800750001 /* TPOSWalletChainCell.m in Sources */,
+				D063A83F218E022800750001 /* TPOSQRCodeResult.m in Sources */,
+				D063A56D218E005E00750001 /* TPOSQRResultHandler.m in Sources */,
+				D063A6E3218E006A00750001 /* TPOSAssetEmptyView.m in Sources */,
+				D063A838218E022800750001 /* TPOSChooseTokenSystemViewController.m in Sources */,
+				D063A78C218E00D000750001 /* TPOSGuideViewController.m in Sources */,
+				9E42CAB321B9073100267076 /* TPOSExportPrivateKeyNoteView.m in Sources */,
+				D063A51C218E005400750001 /* NJOPasswordStrengthEvaluator.m in Sources */,
+				D063A570218E005E00750001 /* UIView+TPOS.m in Sources */,
+				D063A6DC218E006A00750001 /* TPOSTransactionView.m in Sources */,
+				D063A827218E022800750001 /* TPOSEditWalletViewController.m in Sources */,
+				D063A830218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m in Sources */,
+				D063A710218E006A00750001 /* TPOSShareCCell.m in Sources */,
+				D063A48E218E001500750001 /* TPOSJTWallet.m in Sources */,
+				D063A78E218E00D000750001 /* TPOSBaseViewController.m in Sources */,
+				D063A6D1218E006900750001 /* TPOSTokenHistoryModel.m in Sources */,
+				D063A48F218E001500750001 /* TPOSJTPaymentInfo.m in Sources */,
+				D063A7A5218E00DA00750001 /* TPOSDataBaseManager.m in Sources */,
+				D063A6CF218E006900750001 /* TPOSTokenModel.m in Sources */,
+				D063A839218E022800750001 /* TPOSMineViewController.m in Sources */,
+				D063A574218E005E00750001 /* NSString+Size.m in Sources */,
+				D063A518218E005400750001 /* WKWebViewJavascriptBridge.m in Sources */,
+				D063A564218E005E00750001 /* TPOSCameraUtils.m in Sources */,
+				D063A48D218E001500750001 /* TPOSJTPaymentResult.m in Sources */,
+				2CE5C7FA1FF8A2DB008AB801 /* AppDelegate.m in Sources */,
+				D063A569218E005E00750001 /* SGQRCodeHelperTool.m in Sources */,
+				D063A709218E006A00750001 /* TPOSBackupAlert.m in Sources */,
+				D063A55E218E005E00750001 /* MJRefreshGifHeader+TPOS.m in Sources */,
+				D063A6C4218E006900750001 /* TPOSChooseTokenViewController.m in Sources */,
+				D063A7A0218E00DA00750001 /* TPOSWalletDetailDao.m in Sources */,
+				D063A56A218E005E00750001 /* SGQRCodeScanningView.m in Sources */,
+				D063A6D5218E006900750001 /* TPOSChooseTokenCell.m in Sources */,
+				D063A6EF218E006A00750001 /* TPOSTransactionCell.m in Sources */,
+				D063A566218E005E00750001 /* TPOSCustomMJRefreshFooter.m in Sources */,
+				D063A6C6218E006900750001 /* TPOSTransactionDetailViewController.m in Sources */,
+				D063A56F218E005E00750001 /* TPOSUDIDKeyChain.m in Sources */,
+				D063A790218E00D000750001 /* TPOSTabBarController.m in Sources */,
+				D063A526218E005400750001 /* TAAnimatedDotView.m in Sources */,
+				D063A4A9218E003300750001 /* TPOSCommonInfoManager.m in Sources */,
+				D063A6F3218E006A00750001 /* TPOSAssetChooseWalletView.m in Sources */,
+				D063A6E8218E006A00750001 /* TPOSAssetCreateWalletView.m in Sources */,
+				D063A6D2218E006900750001 /* TPOSTransactionTextField.m in Sources */,
+				D063A51E218E005400750001 /* TPOSAlertView.m in Sources */,
+				D063A4B7218E004700750001 /* TPOSWeb3Handler.m in Sources */,
+				D063A706218E006A00750001 /* TPOSContext.m in Sources */,
+				D063A77C218E00C800750001 /* TPOSProtocolViewController.m in Sources */,
+				D063A6E9218E006A00750001 /* TPOSAssetAddTokenCell.m in Sources */,
+				D063A522218E005400750001 /* UIView+SDExtension.m in Sources */,
+				D063A836218E022800750001 /* TPOSSelectChainTypeViewController.m in Sources */,
+				D063A833218E022800750001 /* TPOSBackupWalletViewController.m in Sources */,
+				D063A821218E022800750001 /* TPOSWalletManagerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CB10F262044643A0026F7AA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CB10F2A204464480026F7AA /* zh-Hans */,
+				9E6ECF1F21C39030008ACEC3 /* zh-Hant */,
+				9E6ECF2021C39041008ACEC3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2CE5C8031FF8A2DB008AB801 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CE5C8041FF8A2DB008AB801 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9E40006921C22F83005B2311 /* TPOSAuthPasswordViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E40006A21C22F83005B2311 /* Base */,
+			);
+			name = TPOSAuthPasswordViewController.xib;
+			sourceTree = "<group>";
+		};
+		9E42CAB521BB70A700267076 /* TBShareMenuView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E42CAB621BB70A700267076 /* zh-Hans */,
+				9E42CABB21BB70C600267076 /* zh-Hant */,
+			);
+			name = TBShareMenuView.xib;
+			sourceTree = "<group>";
+		};
+		9E42CAB821BB70B400267076 /* TPOSShareMenuView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E42CAB921BB70B400267076 /* en */,
+			);
+			name = TPOSShareMenuView.xib;
+			sourceTree = "<group>";
+		};
+		D063A85A218FE22E00750001 /* TPOSForceCreateWalletViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D063A85B218FE22E00750001 /* Base */,
+			);
+			name = TPOSForceCreateWalletViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CE5C8091FF8A2DB008AB801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CE5C80A1FF8A2DB008AB801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CE5C80C1FF8A2DB008AB801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2095CE8F77EF64A26AF142DC /* Pods-TokenBank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6FY57Y255B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TokenBank/Vendor/Tencent",
+				);
+				INFOPLIST_FILE = TokenBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocket.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2CE5C80D1FF8A2DB008AB801 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D641099E16AC91DF64091C7F /* Pods-TokenBank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6FY57Y255B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TokenBank/Vendor/Tencent",
+				);
+				INFOPLIST_FILE = TokenBank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocket.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CE5C7F01FF8A2DB008AB801 /* Build configuration list for PBXProject "TokenBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE5C8091FF8A2DB008AB801 /* Debug */,
+				2CE5C80A1FF8A2DB008AB801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CE5C80B1FF8A2DB008AB801 /* Build configuration list for PBXNativeTarget "TokenBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE5C80C1FF8A2DB008AB801 /* Debug */,
+				2CE5C80D1FF8A2DB008AB801 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CE5C7ED1FF8A2DB008AB801 /* Project object */;
+}

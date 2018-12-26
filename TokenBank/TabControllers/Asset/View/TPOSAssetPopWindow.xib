@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TPOSAssetPopWindow">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhL-hw-me9">
+                    <rect key="frame" x="237" y="60.5" width="132" height="93"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-18-UpF">
+                            <rect key="frame" x="0.0" y="10" width="132" height="83"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="5el-Ql-k7U"/>
+                                <constraint firstAttribute="height" constant="83" id="ItR-KD-sma"/>
+                            </constraints>
+                            <color key="separatorColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="deviceRGB"/>
+                            <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kuH-18-UpF" secondAttribute="trailing" id="3rv-ch-ZK4"/>
+                        <constraint firstAttribute="bottom" secondItem="kuH-18-UpF" secondAttribute="bottom" id="N7S-ZU-oZh"/>
+                        <constraint firstItem="kuH-18-UpF" firstAttribute="top" secondItem="jhL-hw-me9" secondAttribute="top" constant="10" id="XdR-H1-jCt"/>
+                        <constraint firstItem="kuH-18-UpF" firstAttribute="leading" secondItem="jhL-hw-me9" secondAttribute="leading" id="pas-3f-fx6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="jhL-hw-me9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60.5" id="Gi9-zP-h3z"/>
+                <constraint firstAttribute="trailing" secondItem="jhL-hw-me9" secondAttribute="trailing" constant="6" id="mP9-m5-9vg"/>
+            </constraints>
+            <connections>
+                <outlet property="tableView" destination="kuH-18-UpF" id="9mQ-dx-9wb"/>
+                <outlet property="topConstanit" destination="Gi9-zP-h3z" id="JAy-gz-yls"/>
+                <outlet property="windowContainer" destination="jhL-hw-me9" id="evZ-C2-7Vs"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

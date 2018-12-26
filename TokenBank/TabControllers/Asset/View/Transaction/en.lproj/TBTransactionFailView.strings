@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "ok"; ObjectID = "Mw0-ZC-n5p"; */
+"Mw0-ZC-n5p.normalTitle" = "ok";
+
+/* Class = "UILabel"; text = "发送交易失败"; ObjectID = "d1X-jl-Pce"; */
+"d1X-jl-Pce.text" = "Unable to Make a Transaction";
+
+/* Class = "UILabel"; text = "密码不正确"; ObjectID = "x8s-v1-Fb8"; */
+"x8s-v1-Fb8.text" = "Wrong Password";

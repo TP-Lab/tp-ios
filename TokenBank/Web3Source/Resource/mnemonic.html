@@ -1,0 +1,41 @@
+<body>
+    <div></div>
+</body>
+<script src="mnemonic.js"></script>
+
+<script>
+    
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+
+    setupWebViewJavascriptBridge(function(bridge) {
+                             bridge.registerHandler('eth_createMnemonicWallet', function(data, responseCallback) {
+                                                    var mnemonic = bip39.generateMnemonic();
+                                                    var seed = bip39.mnemonicToSeed(mnemonic);
+                                                    var hdWallet = hdkey.fromMasterSeed(seed);
+                                                    var key1 = hdWallet.derivePath(data);
+                                                    responseCallback({
+                                                                     'address':key1.getWallet().getAddressString(),
+                                                                     'privateKey':key1.getWallet().getPrivateKeyString(),
+                                                                     'mnemonic':mnemonic
+                                                                     });
+                                                    })
+                             
+                             bridge.registerHandler('eth_retrieveWalletFromMnemonic', function(data, responseCallback){
+                                                    var paramsjson = JSON.parse(data);
+                                                    var mnemonic = paramsjson.mnemonic;
+                                                    var seed = bip39.mnemonicToSeed(mnemonic);
+                                                    var hdWallet = hdkey.fromMasterSeed(seed);
+                                                    var key1 = hdWallet.derivePath(paramsjson.derivePath);
+                                                    responseCallback({'address':key1.getWallet().getAddressString(), 'privateKey':key1.getWallet().getPrivateKeyString()})
+                                                    })
+                             });
+</script>

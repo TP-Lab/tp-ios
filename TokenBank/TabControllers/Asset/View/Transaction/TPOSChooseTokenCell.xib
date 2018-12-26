@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="TPOSChooseTokenCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p9L-EZ-dga">
+                        <rect key="frame" x="15" y="28.5" width="37" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="37" id="fQr-dL-5LF"/>
+                            <constraint firstAttribute="height" constant="37" id="wFE-Pp-PJx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8S-CX-Vw4">
+                        <rect key="frame" x="64" y="36.5" width="34.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtQ-P0-lKV">
+                        <rect key="frame" x="237.5" y="15" width="67.5" height="25.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="≈ $ 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXI-Im-TgP">
+                        <rect key="frame" x="250.5" y="64.5" width="54.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t8S-CX-Vw4" firstAttribute="leading" secondItem="p9L-EZ-dga" secondAttribute="trailing" constant="12" id="8gJ-O6-Bas"/>
+                    <constraint firstItem="p9L-EZ-dga" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="D2V-Ba-j5c"/>
+                    <constraint firstItem="jXI-Im-TgP" firstAttribute="trailing" secondItem="NtQ-P0-lKV" secondAttribute="trailing" id="VWm-Ps-n8f"/>
+                    <constraint firstItem="t8S-CX-Vw4" firstAttribute="centerY" secondItem="p9L-EZ-dga" secondAttribute="centerY" id="Vdx-MV-XFZ"/>
+                    <constraint firstAttribute="trailing" secondItem="NtQ-P0-lKV" secondAttribute="trailing" constant="15" id="c52-sg-pbC"/>
+                    <constraint firstItem="NtQ-P0-lKV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="etz-7f-JFm"/>
+                    <constraint firstItem="p9L-EZ-dga" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lMm-E0-vrs"/>
+                    <constraint firstAttribute="bottom" secondItem="jXI-Im-TgP" secondAttribute="bottom" constant="12" id="lzQ-B0-DcF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="tokenAssetLabel" destination="jXI-Im-TgP" id="0e7-7B-HbU"/>
+                <outlet property="tokenImageView" destination="p9L-EZ-dga" id="zXn-Qz-xRt"/>
+                <outlet property="tokenNameLabel" destination="t8S-CX-Vw4" id="xvO-6w-wD8"/>
+                <outlet property="tokenValueLabel" destination="NtQ-P0-lKV" id="CKk-Ja-TUQ"/>
+            </connections>
+            <point key="canvasLocation" x="-49" y="78"/>
+        </tableViewCell>
+    </objects>
+</document>

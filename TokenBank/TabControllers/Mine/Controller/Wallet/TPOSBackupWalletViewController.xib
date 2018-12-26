@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPOSBackupWalletViewController">
+            <connections>
+                <outlet property="backupBtn" destination="vHt-JI-X3i" id="MZI-vO-6U3"/>
+                <outlet property="tipForBackupLabel" destination="ccL-w5-UbE" id="hu5-x3-atL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_wallet_backup" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-bF-3xQ">
+                    <rect key="frame" x="155" y="78" width="65" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="61" id="Bv4-hk-orX"/>
+                        <constraint firstAttribute="width" constant="65" id="LVY-bu-Iqq"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最后一步：立即备份你的钱包" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-ub-NbQ">
+                    <rect key="frame" x="68.5" y="181" width="238.5" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="RED-Pd-Ka6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccL-w5-UbE">
+                    <rect key="frame" x="15" y="219.5" width="345" height="55"/>
+                    <attributedString key="attributedText">
+                        <fragment content="备份钱包：导出">
+                            <attributes>
+                                <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="“">
+                            <attributes>
+                                <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="助记词">
+                            <attributes>
+                                <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="”">
+                            <attributes>
+                                <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="并抄写在安全的地方，千万不要保存在网络上。然后尝试转入、转出小额资产开始使用。">
+                            <attributes>
+                                <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHt-JI-X3i">
+                    <rect key="frame" x="120" y="314.5" width="135" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="5Ig-0G-naA"/>
+                        <constraint firstAttribute="width" constant="135" id="nBn-je-MKX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="备份钱包">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickBackupBtn:" destination="-1" eventType="touchUpInside" id="feG-f9-eOY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vHt-JI-X3i" firstAttribute="top" secondItem="ccL-w5-UbE" secondAttribute="bottom" constant="40" id="5sa-lt-4i9"/>
+                <constraint firstItem="jZJ-ub-NbQ" firstAttribute="top" secondItem="BQb-bF-3xQ" secondAttribute="bottom" constant="42" id="Baw-Xz-Gxz"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ccL-w5-UbE" secondAttribute="trailing" constant="15" id="Dah-lp-uLy"/>
+                <constraint firstItem="BQb-bF-3xQ" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Evp-mf-zsl"/>
+                <constraint firstItem="jZJ-ub-NbQ" firstAttribute="centerX" secondItem="BQb-bF-3xQ" secondAttribute="centerX" id="MK8-Wr-QLv"/>
+                <constraint firstItem="BQb-bF-3xQ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="58" id="UNo-2P-54Y"/>
+                <constraint firstItem="ccL-w5-UbE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="Ubh-ww-rWK"/>
+                <constraint firstItem="vHt-JI-X3i" firstAttribute="centerX" secondItem="ccL-w5-UbE" secondAttribute="centerX" id="ihY-zV-gWS"/>
+                <constraint firstItem="ccL-w5-UbE" firstAttribute="top" secondItem="jZJ-ub-NbQ" secondAttribute="bottom" constant="16.5" id="vNn-s6-eFc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty_wallet_backup" width="65" height="61"/>
+    </resources>
+</document>
