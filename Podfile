@@ -13,5 +13,6 @@ pod 'SVProgressHUD'
 pod 'Toast'
 pod 'Bugly'
 pod 'WechatOpenSDK'
+pod 'jcc_oc_base_lib'
 
 end

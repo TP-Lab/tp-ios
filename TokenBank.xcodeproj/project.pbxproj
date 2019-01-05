@@ -28,13 +28,8 @@
 		9E42CAB721BB70A700267076 /* TBShareMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAB521BB70A700267076 /* TBShareMenuView.xib */; };
 		9E42CABA21BB70B400267076 /* TPOSShareMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CAB821BB70B400267076 /* TPOSShareMenuView.xib */; };
 		9E42CABD21BB97E500267076 /* TPOSAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E42CABC21BB97E500267076 /* TPOSAssetCell.xib */; };
-		D063A488218E001500750001 /* jt_wallet.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A477218E001500750001 /* jt_wallet.js */; };
-		D063A489218E001500750001 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = D063A478218E001500750001 /* bundle.js */; };
-		D063A48A218E001500750001 /* jtWallet.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A479218E001500750001 /* jtWallet.html */; };
-		D063A48B218E001500750001 /* jtWeb3.html in Resources */ = {isa = PBXBuildFile; fileRef = D063A47A218E001500750001 /* jtWeb3.html */; };
 		D063A48C218E001500750001 /* TPOSJTPOSalance.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A47D218E001500750001 /* TPOSJTPOSalance.m */; };
 		D063A48D218E001500750001 /* TPOSJTPaymentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A47F218E001500750001 /* TPOSJTPaymentResult.m */; };
-		D063A48E218E001500750001 /* TPOSJTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A481218E001500750001 /* TPOSJTWallet.m */; };
 		D063A48F218E001500750001 /* TPOSJTPaymentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A483218E001500750001 /* TPOSJTPaymentInfo.m */; };
 		D063A490218E001500750001 /* TPOSJTPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A484218E001500750001 /* TPOSJTPayment.m */; };
 		D063A491218E001500750001 /* TPOSJTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D063A487218E001500750001 /* TPOSJTManager.m */; };
@@ -240,21 +235,15 @@
 		9E6ECF1F21C39030008ACEC3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9E6ECF2021C39041008ACEC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C950C827551E21A6B69AECE8 /* Pods_TokenBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokenBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D063A477218E001500750001 /* jt_wallet.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jt_wallet.js; sourceTree = "<group>"; };
-		D063A478218E001500750001 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
-		D063A479218E001500750001 /* jtWallet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jtWallet.html; sourceTree = "<group>"; };
-		D063A47A218E001500750001 /* jtWeb3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jtWeb3.html; sourceTree = "<group>"; };
 		D063A47B218E001500750001 /* TPOSJTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTManager.h; sourceTree = "<group>"; };
 		D063A47D218E001500750001 /* TPOSJTPOSalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPOSalance.m; sourceTree = "<group>"; };
 		D063A47E218E001500750001 /* TPOSJTPaymentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPaymentInfo.h; sourceTree = "<group>"; };
 		D063A47F218E001500750001 /* TPOSJTPaymentResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPaymentResult.m; sourceTree = "<group>"; };
 		D063A480218E001500750001 /* TPOSJTPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPayment.h; sourceTree = "<group>"; };
-		D063A481218E001500750001 /* TPOSJTWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTWallet.m; sourceTree = "<group>"; };
 		D063A482218E001500750001 /* TPOSJTPOSalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPOSalance.h; sourceTree = "<group>"; };
 		D063A483218E001500750001 /* TPOSJTPaymentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPaymentInfo.m; sourceTree = "<group>"; };
 		D063A484218E001500750001 /* TPOSJTPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTPayment.m; sourceTree = "<group>"; };
 		D063A485218E001500750001 /* TPOSJTPaymentResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTPaymentResult.h; sourceTree = "<group>"; };
-		D063A486218E001500750001 /* TPOSJTWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSJTWallet.h; sourceTree = "<group>"; };
 		D063A487218E001500750001 /* TPOSJTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSJTManager.m; sourceTree = "<group>"; };
 		D063A493218E003300750001 /* TPOSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOSApiClient.h; sourceTree = "<group>"; };
 		D063A49B218E003300750001 /* TPOSCommonInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOSCommonInfoManager.m; sourceTree = "<group>"; };
@@ -657,22 +646,10 @@
 			isa = PBXGroup;
 			children = (
 				D063A47C218E001500750001 /* Model */,
-				D063A476218E001500750001 /* JTJS */,
 				D063A47B218E001500750001 /* TPOSJTManager.h */,
 				D063A487218E001500750001 /* TPOSJTManager.m */,
 			);
 			path = JTum;
-			sourceTree = "<group>";
-		};
-		D063A476218E001500750001 /* JTJS */ = {
-			isa = PBXGroup;
-			children = (
-				D063A477218E001500750001 /* jt_wallet.js */,
-				D063A478218E001500750001 /* bundle.js */,
-				D063A479218E001500750001 /* jtWallet.html */,
-				D063A47A218E001500750001 /* jtWeb3.html */,
-			);
-			path = JTJS;
 			sourceTree = "<group>";
 		};
 		D063A47C218E001500750001 /* Model */ = {
@@ -682,12 +659,10 @@
 				D063A47E218E001500750001 /* TPOSJTPaymentInfo.h */,
 				D063A47F218E001500750001 /* TPOSJTPaymentResult.m */,
 				D063A480218E001500750001 /* TPOSJTPayment.h */,
-				D063A481218E001500750001 /* TPOSJTWallet.m */,
 				D063A482218E001500750001 /* TPOSJTPOSalance.h */,
 				D063A483218E001500750001 /* TPOSJTPaymentInfo.m */,
 				D063A484218E001500750001 /* TPOSJTPayment.m */,
 				D063A485218E001500750001 /* TPOSJTPaymentResult.h */,
-				D063A486218E001500750001 /* TPOSJTWallet.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1515,9 +1490,6 @@
 				D063A843218E022800750001 /* TPOSRetrivePathCell.xib in Resources */,
 				D063A70C218E006A00750001 /* TPOSShareCCell.xib in Resources */,
 				2CE5C8021FF8A2DB008AB801 /* Assets.xcassets in Resources */,
-				D063A48B218E001500750001 /* jtWeb3.html in Resources */,
-				D063A48A218E001500750001 /* jtWallet.html in Resources */,
-				D063A488218E001500750001 /* jt_wallet.js in Resources */,
 				D063A6F2218E006A00750001 /* TPOSAssetHeader.xib in Resources */,
 				9E42CAB421B9073100267076 /* TPOSExportPrivateKeyNoteView.xib in Resources */,
 				2C3F86551FFD3CBB0065183B /* Main.storyboard in Resources */,
@@ -1526,7 +1498,6 @@
 				D063A853218E022800750001 /* TPOSChooseTokenSystemCell.xib in Resources */,
 				D063A85C218FE22E00750001 /* TPOSForceCreateWalletViewController.xib in Resources */,
 				D063A6DE218E006A00750001 /* TPOSTransactionHighOptionView.xib in Resources */,
-				D063A489218E001500750001 /* bundle.js in Resources */,
 				D063A82C218E022800750001 /* TPOSCreateMemonicViewController.xib in Resources */,
 				D063A855218E022800750001 /* TPOSMineHeader.xib in Resources */,
 				9E42CABA21BB70B400267076 /* TPOSShareMenuView.xib in Resources */,
@@ -1570,6 +1541,8 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+				"${BUILT_PRODUCTS_DIR}/jcc_oc_base_lib/jcc_oc_base_lib.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1582,6 +1555,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jcc_oc_base_lib.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1693,7 +1668,6 @@
 				D063A827218E022800750001 /* TPOSEditWalletViewController.m in Sources */,
 				D063A830218E022800750001 /* TPOSPrivateKeyImportWalletViewController.m in Sources */,
 				D063A710218E006A00750001 /* TPOSShareCCell.m in Sources */,
-				D063A48E218E001500750001 /* TPOSJTWallet.m in Sources */,
 				D063A78E218E00D000750001 /* TPOSBaseViewController.m in Sources */,
 				D063A6D1218E006900750001 /* TPOSTokenHistoryModel.m in Sources */,
 				D063A48F218E001500750001 /* TPOSJTPaymentInfo.m in Sources */,

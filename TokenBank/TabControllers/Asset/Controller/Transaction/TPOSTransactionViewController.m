@@ -31,6 +31,8 @@
 #import "TPOSWalletDetailDaoManager.h"
 #import "NSString+TPOS.h"
 #import "UIImage+TPOS.h"
+#import <jcc_oc_base_lib/JTWalletManager.h>
+#import <jcc_oc_base_lib/JccChains.h>
 
 @import SVProgressHUD;
 @import Masonry;
@@ -316,11 +318,10 @@
     };
     
     if ([_currentTokenModel.blockchain_id isEqualToString:swtcChain]) { //JT
-        [[TPOSJTManager shareInstance] isValidAddress:to completion:^(BOOL isValid, NSError *error) {
+        [[JTWalletManager shareInstance] isValidAddress:to chain:SWTC_CHAIN completion:^(BOOL isValid) {
             if (!isValid) {
                 [self.view makeToast:[[TPOSLocalizedHelper standardHelper] stringWithKey:@"wrong_addr_tips"]];
             } else {
-                
                 TPOSRecommendGasModel *model = [TPOSRecommendGasModel new];
                 model.max_gas = 1;
                 model.min_gas = 0.0001;

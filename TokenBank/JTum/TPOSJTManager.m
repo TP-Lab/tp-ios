@@ -8,7 +8,6 @@
 
 #import "TPOSJTManager.h"
 #import "TPOSApiClient.h"
-#import "TPOSJTWallet.h"
 #import "TPOSJTPOSalance.h"
 #import "TPOSJTPayment.h"
 #import "TPOSJTPaymentInfo.h"
@@ -19,17 +18,14 @@
 #import "TPOSMacro.h"
 #import "TPOSLocalizedHelper.h"
 #import "TPOSTokenModel.h"
+#import <jcc_oc_base_lib/JTWalletManager.h>
+#import <jcc_oc_base_lib/JccChains.h>
 
 #define kJTApiPrefix @"https://api.jingtum.com"
 
 #define jingchangExchangeApiPrefix @"https://ewdjbbl8jgf.jccdex.cn"
 
-@interface TPOSJTManager()<WKNavigationDelegate,WKUIDelegate>
-@property WebViewJavascriptBridge* bridge;
-@property (nonatomic, strong) WKWebView *webView;
-
-@property WebViewJavascriptBridge* walletBridge;
-@property (nonatomic, strong) WKWebView *walletWebView;
+@interface TPOSJTManager()
 @end
 
 @implementation TPOSJTManager
@@ -39,7 +35,6 @@
     static TPOSJTManager *manager;
     dispatch_once(&onceToken, ^{
         manager = [[TPOSJTManager alloc] init];
-        [manager initJTWebEnviroment];
     });
     return manager;
 }
@@ -52,61 +47,6 @@
 - (NSString *)jingchangUrlWithPath:(NSString *)path {
     NSString *url = [NSString stringWithFormat:@"%@%@",jingchangExchangeApiPrefix,path];
     return url;
-}
-
-//本地创建钱包
-- (void)createJingTumWallet:(void(^)(TPOSJTWallet *wallet, NSError *error))completion {
-    
-    __weak typeof(self) weakSelf = self;
-    
-    [_walletBridge callHandler:@"jt_createWallet" data:nil responseCallback:^(id responseData) {
-        if ([responseData isKindOfClass:[NSDictionary class]]) {
-            TPOSJTWallet *wallet = [TPOSJTWallet mj_objectWithKeyValues:responseData];
-            if (completion) {
-                completion(wallet,nil);
-            }
-        } else {
-            if (completion) {
-                completion(nil, [weakSelf errorDomain:@"local bundle.js" reason:@"responseData is not Dictionary"]);
-            }
-        }
-    }];
-}
-
-//根据pk获得钱包
-- (void)retrieveWalletWithPk:(NSString *)pk completion:(void(^)(TPOSJTWallet *wallet, NSError *error))completion {
-    
-    __weak typeof(self) weakSelf = self;
-
-    [_walletBridge callHandler:@"jt_createWalletFromPk" data:pk responseCallback:^(id responseData) {
-        if ([responseData isKindOfClass:[NSDictionary class]]) {
-            TPOSJTWallet *wallet = [TPOSJTWallet mj_objectWithKeyValues:responseData];
-            if (completion) {
-                completion(wallet,nil);
-            }
-        } else {
-            if (completion) {
-                completion(nil, [weakSelf errorDomain:@"local bundle.js" reason:@"responseData is not Dictionary"]);
-            }
-        }
-    }];
-}
-
-//校验钱包地址是否有效
-- (void)isValidAddress:(NSString *)address completion:(void(^)(BOOL isValid, NSError *error))completion {
-    __weak typeof(self) weakSelf = self;
-    
-    [_walletBridge callHandler:@"jt_isAddress" data:address responseCallback:^(id responseData) {
-        if ([responseData isKindOfClass:[NSNumber class]]) {
-            if (completion) {
-                completion([responseData boolValue],nil);
-            }
-        } else {
-            if (completion) {
-                completion(nil, [weakSelf errorDomain:@"local bundle.js" reason:@"responseData is not Dictionary"]);
-            }
-        }
-    }];
 }
 
 //根据地址查询余额
@@ -260,31 +200,29 @@
     }
     
     __weak typeof(self) weakSelf = self;
-    __weak typeof(_bridge) weakBridge = _bridge;
     
     [self checkAccountBalancesWithAddress:payment.source currency:payment.amount.currency success:^(NSArray<TPOSJTPOSalance *> *balances, NSInteger sequence) {
         
         NSMutableDictionary *parms = [[NSMutableDictionary alloc] initWithCapacity:0];
         if (fee && fee.length > 0) {
-            [parms setObject:fee forKey:@"fee"];
+            [parms setObject:fee forKey:@"Fee"];
         } else {
-            [parms setObject:@"0.1" forKey:@"fee"];
+            [parms setObject:@"0.1" forKey:@"Fee"];
         }
-        [parms setObject:@(sequence) forKey:@"sequence"];
-        [parms setObject:payment.source forKey:@"account"];
-        [parms setObject:payment.amount.value forKey:@"value"];
-        [parms setObject:payment.amount.currency forKey:@"currency"];
-        [parms setObject:payment.amount.issuer forKey:@"issuer"];
-        [parms setObject:payment.destination forKey:@"destination"];
-        [parms setObject:secretKey forKey:@"seed"];
-        
-        NSString *json = [weakSelf dataTojsonString:parms];
-        
-        [weakBridge callHandler:@"jt_sign" data:json responseCallback:^(id responseData) {
-            if (responseData) {
+        [parms setObject:@(sequence) forKey:@"Sequence"];
+        NSMutableDictionary *amount = [[NSMutableDictionary alloc] initWithCapacity:0];
+        [amount setObject:payment.amount.value forKey:@"value"];
+        [amount setObject:payment.amount.currency forKey:@"currency"];
+        [amount setObject:payment.amount.issuer forKey:@"issuer"];
+        [parms setObject:payment.source forKey:@"Account"];
+        [parms setObject:amount forKey:@"Amount"];
+        [parms setObject:payment.destination forKey:@"Destination"];
+        [parms setValue:@"Payment" forKey:@"TransactionType"];
+        [parms setValue:[[NSNumber alloc] initWithInt:0] forKey:@"Flags"];
+        [[JTWalletManager shareInstance] sign:parms secret:secretKey chain:SWTC_CHAIN completion:^(NSError *error, NSString *signature) {
+            if (!error) {
                 NSString *url = [self jingchangUrlWithPath:@"/exchange/sign_payment"];
-                [[TPOSApiClient sharedInstance] jsonPost:url parameters:@{@"sign":responseData} success:^(id responseObject) {
-                    
+                [[TPOSApiClient sharedInstance] jsonPost:url parameters:@{@"sign":signature} success:^(id responseObject) {
                     if (responseObject && [responseObject isKindOfClass:[NSDictionary class]] && [[responseObject objectForKey:@"code"] isEqualToString:jingchangSuccessCode]) {
                         TPOSJTPaymentResult *result = [[TPOSJTPaymentResult alloc] init];
                         NSString *msg = [responseObject objectForKey:@"msg"];
@@ -301,7 +239,6 @@
                             failure([weakSelf errorDomain:@"/exchange/sign_payment" reason:[[TPOSLocalizedHelper standardHelper] stringWithKey:@"trans_fail"]]);
                         }
                     }
-                    
                 } failure:^(NSError *error) {
                     if (failure) {
                         failure(error);
@@ -313,7 +250,6 @@
                 }
             }
         }];
-        
     } failure:^(NSError *error) {
         if (failure) {
             failure(error);
@@ -467,90 +403,6 @@
 - (NSError *)errorDomain:(NSString *)domain reason:(NSString *)reason {
     NSError *error = [NSError errorWithDomain:@"" code:-1 userInfo:@{NSLocalizedDescriptionKey:reason}];
     return error;
-}
-
-#pragma mark - WebView
-
-- (WKWebView *)pureWebView {
-    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-    WKPreferences *preferences = [[WKPreferences alloc] init];
-    preferences.javaScriptCanOpenWindowsAutomatically = YES;
-    config.preferences = preferences;
-    
-    return [[WKWebView alloc] initWithFrame:CGRectZero configuration:config];
-}
-
-- (void)initJTWebEnviroment {
-    if (_bridge) { return; }
-    
-    self.webView = [self pureWebView];
-    self.webView.navigationDelegate = self;
-    self.webView.UIDelegate = self;
-    
-    self.walletWebView = [self pureWebView];
-    self.walletWebView.navigationDelegate = self;
-    self.walletWebView.UIDelegate = self;
-    
-    [WebViewJavascriptBridge enableLogging];
-    
-    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
-    [_bridge setWebViewDelegate:self];
-    
-    _walletBridge = [WebViewJavascriptBridge bridgeForWebView:self.walletWebView];
-    [_walletBridge setWebViewDelegate:self];
-    
-    [self loadJTWebPage:self.webView];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.webView];
-    
-    [self loadWalletWebPage:self.walletWebView];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.walletWebView];
-}
-
-- (void)loadJTWebPage:(WKWebView*)webView {
-    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"jtWeb3" ofType:@"html"];
-    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
-    [webView loadHTMLString:appHtml baseURL:baseURL];
-}
-
-- (void)loadWalletWebPage:(WKWebView*)webView {
-    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"jtWallet" ofType:@"html"];
-    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
-    [webView loadHTMLString:appHtml baseURL:baseURL];
-}
-
-
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    TPOSLog(@"finish loaded");
-    if ([webView isEqual:self.webView]) {
-        self.finishLoadedTx = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kJTFinishLoadedTxNotification object:nil];
-    } else {
-        self.finishLoadedWallet = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:kJTFinishLoadedWalletNotification object:nil];
-    }
-    
-}
-
-- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
-    TPOSLog(@"%@", message);
-    completionHandler();
-}
-
-- (NSString *)dataTojsonString:(id)object {
-    
-    NSString *jsonString = nil;
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    if (!jsonData) {
-        TPOSLog(@"Got an error: %@", error);
-    } else {
-        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-    return jsonString;
 }
 
 @end

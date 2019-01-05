@@ -14,14 +14,15 @@
 #import "TPOSMacro.h"
 #import "TPOSBlockChainModel.h"
 #import "TPOSWeb3Handler.h"
-#import "TPOSJTManager.h"
 #import "TPOSWalletDao.h"
 #import "TPOSWalletModel.h"
 #import "NSString+TPOS.h"
-#import "TPOSJTWallet.h"
 #import "TPOSBlockChainModel.h"
 #import "TPOSPasswordView.h"
 #import "NJOPasswordStrengthEvaluator.h"
+#import <jcc_oc_base_lib/JingtumWallet.h>
+#import <jcc_oc_base_lib/JTWalletManager.h>
+#import <jcc_oc_base_lib/JccChains.h>
 
 @import Toast;
 @import SVProgressHUD;
@@ -208,8 +209,7 @@
             }
         }];
     } else if ([swtcChain isEqualToString:_blockchain.hid]) {
-        //JT
-        [[TPOSJTManager shareInstance] retrieveWalletWithPk:pkString completion:^(TPOSJTWallet *wallet, NSError *error) {
+        [[JTWalletManager shareInstance] importSecret:pkString chain:SWTC_CHAIN completion:^(NSError *error, JingtumWallet *wallet) {
             if (!error) {
                 [weakSelf createWalletToServerWithAddress:wallet.address toLocalWithPrivateKey:wallet.secret mnemonic:nil blockchainId:swtcChain];
             } else {

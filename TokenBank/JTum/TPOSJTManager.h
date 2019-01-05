@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class TPOSJTWallet;
 @class TPOSJTPOSalance;
 @class TPOSJTAmount;
 @class TPOSJTPayment;
@@ -22,18 +21,6 @@
 @property (nonatomic, assign) BOOL finishLoadedWallet;
 
 + (instancetype)shareInstance;
-
-//启动JT环境
-- (void)initJTWebEnviroment;
-
-//创建账号
-- (void)createJingTumWallet:(void(^)(TPOSJTWallet *wallet, NSError *error))completion;
-
-//导入钱包
-- (void)retrieveWalletWithPk:(NSString *)pk completion:(void(^)(TPOSJTWallet *wallet, NSError *error))completion;
-
-//校验钱包地址是否有效
-- (void)isValidAddress:(NSString *)address completion:(void(^)(BOOL isValid, NSError *error))completion;
 
 //根据地址查询余额
 - (void)checkAccountBalancesWithAddress:(NSString *)address

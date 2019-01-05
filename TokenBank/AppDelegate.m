@@ -17,7 +17,6 @@
 #import "TPOSWalletDao.h"
 #import "TPOSForceCreateWalletViewController.h"
 #import "UIColor+Hex.h"
-#import "TPOSJTManager.h"
 #import "TPOSJTPayment.h"
 #import "TPOSCommonInfoManager.h"
 #import "TPOSEnterAuthViewController.h"
