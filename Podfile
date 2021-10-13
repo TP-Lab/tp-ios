@@ -14,5 +14,6 @@ pod 'Toast'
 pod 'Bugly'
 pod 'WechatOpenSDK'
 pod 'jcc_oc_base_lib'
+pod 'FLEX', '~> 2.1', :configurations => ['Debug']
 
 end
